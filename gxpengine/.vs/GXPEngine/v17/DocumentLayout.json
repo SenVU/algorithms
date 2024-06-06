@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\gxpengine\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine\\GXPEngine.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\gxpengine\\gxpengine\\mygame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine\\GXPEngine.csproj|solutionrelative:gxpengine\\mygame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyGame.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\gxpengine\\gxpengine\\MyGame.cs",
+              "RelativeDocumentMoniker": "gxpengine\\MyGame.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\gxpengine\\gxpengine\\MyGame.cs",
+              "RelativeToolTip": "gxpengine\\MyGame.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T14:55:49.698Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

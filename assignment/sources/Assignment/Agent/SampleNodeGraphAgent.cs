@@ -14,16 +14,16 @@ class SampleNodeGraphAgent : NodeGraphAgent
 		SetOrigin(width / 2, height / 2);
 
 		//position ourselves on a random node
-		if (pNodeGraph.nodes.Count > 0)
+		if (pNodeGraph.GetNodes().Count > 0)
 		{
-			jumpToNode(pNodeGraph.nodes[Utils.Random(0, pNodeGraph.nodes.Count)]);
+			jumpToNode(pNodeGraph.GetNodes()[Utils.Random(0, pNodeGraph.GetNodes().Count)]);
 		}
 
 		//listen to nodeclicks
-		pNodeGraph.OnNodeLeftClicked += onNodeClickHandler;
+		pNodeGraph.OnNodeLeftClicked += OnNodeClickHandler;
 	}
 
-	protected virtual void onNodeClickHandler(Node pNode)
+    protected virtual void OnNodeClickHandler(Node pNode)
 	{
 		_target = pNode;
 	}

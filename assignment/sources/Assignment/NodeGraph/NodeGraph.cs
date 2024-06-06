@@ -3,19 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-/**
- * Very basic implementation of a NodeGraph class that:
- * - contains Nodes
- * - can detect node clicks
- * - can draw itself
- * - add connections between nodes though a helper method
- * 
- * See SampleDungeonNodeGraph for more info on the todos.
- */
 abstract class NodeGraph : Canvas
 {
 	//references to all the nodes in our nodegraph
-	public readonly List<Node> nodes = new List<Node>();
+	readonly List<Node> nodes = new List<Node>();
 
 	//event handlers, register for any of these events if interested
 	//see SampleNodeGraphAgent for an example of a LeftClick event handler.
@@ -26,21 +17,21 @@ abstract class NodeGraph : Canvas
 	public Action<Node> OnNodeShiftRightClicked = delegate { };
 
 	//required for node highlighting on mouse over
-	private Node _nodeUnderMouse = null;
+	Node _nodeUnderMouse = null;
 
 	//some drawing settings
-	public int nodeSize { get; private set; }
-	private Pen _connectionPen = new Pen(Color.Black, 2);
-	private Pen _outlinePen = new Pen(Color.Black, 2.1f);
-	private Brush _defaultNodeColor = Brushes.CornflowerBlue;
-	private Brush _highlightedNodeColor = Brushes.Cyan;
+	int nodeSize;
+	Pen connectionPen = new Pen(Color.Black, 2);
+	Pen outlinePen = new Pen(Color.Black, 2.1f);
+	Brush defaultNodeColor = Brushes.CornflowerBlue;
+	Brush highlightedNodeColor = Brushes.Cyan;
 	
 	/** 
 	 * Construct a nodegraph with the given screen dimensions, eg 800x600
 	 */
-	public NodeGraph(int pWidth, int pHeight, int pNodeSize) : base(pWidth, pHeight)
+	public NodeGraph(int width, int height, int nodeSize) : base(width, height)
 	{
-		nodeSize = pNodeSize;
+		this.nodeSize = nodeSize;
 
 		Console.WriteLine("\n-----------------------------------------------------------------------------");
 		Console.WriteLine(this.GetType().Name + " created.");
@@ -51,88 +42,84 @@ abstract class NodeGraph : Canvas
 	/**
 	 * Convenience method for adding a connection between two nodes in the nodegraph
 	 */
-	public void AddConnection(Node pNodeA, Node pNodeB)
+	public void AddConnection(Node nodeA, Node nodeB)
 	{
-		if (nodes.Contains(pNodeA) && nodes.Contains(pNodeB))
+		if (nodes.Contains(nodeA) && nodes.Contains(nodeB))
 		{
-			if (!pNodeA.connections.Contains(pNodeB)) pNodeA.connections.Add(pNodeB);
-			if (!pNodeB.connections.Contains(pNodeA)) pNodeB.connections.Add(pNodeA);
+			if (!nodeA.IsConnectedTo(nodeB)) nodeA.AddConnection(nodeB);
+			if (!nodeB.IsConnectedTo(nodeA)) nodeB.AddConnection(nodeA);
 		}
 	}
 
-	/**
-	 * Trigger the node graph generation process, do not override this method, 
-	 * but override generate (note the lower case) instead, calling AddConnection as required.
-	 */
-	public void Generate()
+	public void StartGeneration()
 	{
-		System.Console.WriteLine(this.GetType().Name + ".Generate: Generating graph...");
+		Console.WriteLine(this.GetType().Name + ".Generate: Generating graph...");
 
 		//always remove all nodes before generating the graph, as it might have been generated previously
 		nodes.Clear();
-		generate();
-		draw();
+		Generate();
+		Draw();
 
 		System.Console.WriteLine(this.GetType().Name + ".Generate: Graph generated.");
 	}
 
-	protected abstract void generate();
+    protected abstract void Generate();
 
-	/////////////////////////////////////////////////////////////////////////////////////////
-	/// NodeGraph visualization helper methods
-	///
+    /////////////////////////////////////////////////////////////////////////////////////////
+    /// NodeGraph visualization helper methods
+    ///
 
-	protected virtual void draw()
+    protected virtual void Draw()
 	{
 		graphics.Clear(Color.Transparent);
-		drawAllConnections();
-		drawNodes();
+		DrawAllConnections();
+		DrawNodes();
 	}
 
-	protected virtual void drawNodes()
+    protected virtual void DrawNodes()
 	{
-		foreach (Node node in nodes) drawNode(node, _defaultNodeColor);
+		foreach (Node node in nodes) DrawNode(node, defaultNodeColor);
 	}
 
-	protected virtual void drawNode(Node pNode, Brush pColor)
+    protected virtual void DrawNode(Node node, Brush color)
 	{
 		//colored node fill
 		graphics.FillEllipse(
-			pColor,
-			pNode.location.X - nodeSize,
-			pNode.location.Y - nodeSize,
+			color,
+			node.location.X - nodeSize,
+			node.location.Y - nodeSize,
 			2 * nodeSize,
 			2 * nodeSize
 		);
 
 		//black node outline
 		graphics.DrawEllipse(
-			_outlinePen,
-			pNode.location.X - nodeSize - 1,
-			pNode.location.Y - nodeSize - 1,
+			outlinePen,
+			node.location.X - nodeSize - 1,
+			node.location.Y - nodeSize - 1,
 			2 * nodeSize + 1,
 			2 * nodeSize + 1
 		);
 	}
 
-	protected virtual void drawAllConnections()
+    protected virtual void DrawAllConnections()
 	{
 		//note that this means all connections are drawn twice, once from A->B and once from B->A
 		//but since is only a debug view we don't care
-		foreach (Node node in nodes) drawNodeConnections(node);
+		foreach (Node node in nodes) DrawNodeConnections(node);
 	}
 
-	protected virtual void drawNodeConnections(Node pNode)
+    protected virtual void DrawNodeConnections(Node node)
 	{
-		foreach (Node connection in pNode.connections)
+		foreach (Node connection in node.GetConnections())
 		{
-			drawConnection(pNode, connection);
+			DrawConnection(node, connection);
 		}
 	}
 
-	protected virtual void drawConnection(Node pStartNode, Node pEndNode)
+    protected virtual void DrawConnection(Node pStartNode, Node pEndNode)
 	{
-		graphics.DrawLine(_connectionPen, pStartNode.location, pEndNode.location);
+		graphics.DrawLine(connectionPen, pStartNode.location, pEndNode.location);
 	}
 
 	/////////////////////////////////////////////////////////////////////////////////////////
@@ -142,14 +129,14 @@ abstract class NodeGraph : Canvas
 	//this has to be virtual or public otherwise the subclass won't pick it up
 	protected virtual void Update()
 	{
-		handleMouseInteraction();
+		HandleMouseInteraction();
 	}
 
-	/////////////////////////////////////////////////////////////////////////////////////////
-	///							Node click handling
-	///							
+    /////////////////////////////////////////////////////////////////////////////////////////
+    ///							Node click handling
+    ///							
 
-	protected virtual void handleMouseInteraction()
+    protected virtual void HandleMouseInteraction()
 	{
 		//then check if one of the nodes is under the mouse and if so assign it to _nodeUnderMouse
 		Node newNodeUnderMouse = null;
@@ -166,9 +153,9 @@ abstract class NodeGraph : Canvas
 		//do mouse node hightlighting
 		if (newNodeUnderMouse != _nodeUnderMouse)
 		{
-			if (_nodeUnderMouse != null) drawNode(_nodeUnderMouse, _defaultNodeColor);
+			if (_nodeUnderMouse != null) DrawNode(_nodeUnderMouse, defaultNodeColor);
 			_nodeUnderMouse = newNodeUnderMouse;
-			if (_nodeUnderMouse != null) drawNode(_nodeUnderMouse, _highlightedNodeColor);
+			if (_nodeUnderMouse != null) DrawNode(_nodeUnderMouse, highlightedNodeColor);
 		}
 
 		//if we are still not hovering over a node, we are done
@@ -194,11 +181,11 @@ abstract class NodeGraph : Canvas
 	 * Checks whether the mouse is over a Node.
 	 * This assumes local and global space are the same.
 	 */
-	public bool IsMouseOverNode(Node pNode)
+	public bool IsMouseOverNode(Node node)
 	{
 		//ah life would be so much easier if we'd all just use Vec2's ;)
-		float dx = pNode.location.X - Input.mouseX;
-		float dy = pNode.location.Y - Input.mouseY;
+		float dx = node.location.X - Input.mouseX;
+		float dy = node.location.Y - Input.mouseY;
 		float mouseToNodeDistance = Mathf.Sqrt(dx * dx + dy * dy);
 
 		return mouseToNodeDistance < nodeSize;
@@ -223,4 +210,17 @@ abstract class NodeGraph : Canvas
 		return GetNodeAt(x,y);
     }
 
+	public void AddNode(Node node) { nodes.Add(node); }
+
+	public List<Node> GetNodes() { return nodes; }
+
+	public int GetNodeSize() { return nodeSize; }
+
+	public void TryPlaceNode(Point location)
+    {
+        if (GetNodeAt(location) == null)
+        {
+            new Node(location, this);
+        }
+    }
 }

@@ -16,56 +16,85 @@ using System.Drawing;
  */
  class HighLevelDungeonNodeGraph : NodeGraph
 {
-	protected Dungeon _dungeon;
+    protected Dungeon dungeon;
 
-	public HighLevelDungeonNodeGraph(Dungeon pDungeon) : base((int)(pDungeon.size.Width * pDungeon.scale), (int)(pDungeon.size.Height * pDungeon.scale), Math.Max((int)pDungeon.scale/2,1))
+    public HighLevelDungeonNodeGraph(Dungeon dungeon) : base((int)(dungeon.size.Width * dungeon.scale), (int)(dungeon.size.Height * dungeon.scale), Math.Max((int)dungeon.scale/5,1))
 	{
-		Debug.Assert(pDungeon != null, "Please pass in a dungeon.");
+		Debug.Assert(dungeon != null, "Please pass in a dungeon.");
 
-		_dungeon = pDungeon;
+		this.dungeon = dungeon;
 	}
 
-	protected override void generate ()
+	protected override void Generate ()
 	{
-		foreach (Room room in _dungeon.rooms)
+		if (AlgorithmsAssignment.nodeGraphHighQuality) { HighQualityGenerate(); }
+		else { LowQualityGenerate (); }
+		
+	}
+
+	void LowQualityGenerate()
+	{
+		foreach (Room room in dungeon.rooms)
 		{
-			new Node(getRoomCenter(room), this);
-        }
-		foreach (Door door in _dungeon.doors)
+			TryPlaceNode(room.GetCenterPoint());
+		}
+		foreach (Door door in dungeon.doors)
 		{
 			door.GenerateNodes(this);
 		}
 	}
 
-	/**
-	 * A helper method for your convenience so you don't have to meddle with coordinate transformations.
-	 * @return the location of the center of the given room you can use for your nodes in this class
-	 */
-	protected Point getRoomCenter(Room pRoom)
+	void HighQualityGenerate()
 	{
-		float centerX = ((pRoom.area.Left + pRoom.area.Right) / 2.0f) * _dungeon.scale;
-		float centerY = ((pRoom.area.Top + pRoom.area.Bottom) / 2.0f) * _dungeon.scale;
-		return new Point((int)centerX, (int)centerY);
-	}
+        foreach (Room room in dungeon.rooms)
+        {
+            for (int i = 0; i < (room.area.Width - 2) * (room.area.Height - 2); i++)
+            {
+                TryPlaceNode(new Point((room.area.X + 1 + i % (room.area.Width - 2))*(int)dungeon.scale + ((int)dungeon.scale / 2), 
+					(room.area.Y + 1 + i / (room.area.Width - 2)) * (int)dungeon.scale + ((int)dungeon.scale / 2)));
+            }
+        }
 
-	/**
-	 * A helper method for your convenience so you don't have to meddle with coordinate transformations.
-	 * @return the location of the center of the given door you can use for your nodes in this class
-	 */
-	protected Point getDoorCenter(Door pDoor)
-	{
-		return getPointCenter(pDoor.GetCenterPoint());
-	}
+        foreach (Door door in dungeon.doors)
+        {
+            for (int i = 0; i < door.area.Width * door.area.Height; i++)
+            {
+                TryPlaceNode(new Point((door.area.X  + i % (door.area.Width)) * (int)dungeon.scale + ((int)dungeon.scale / 2), 
+					(door.area.Y + i / (door.area.Width)) * (int)dungeon.scale + ((int)dungeon.scale / 2)));
+            }
+        }
 
-	/**
-	 * A helper method for your convenience so you don't have to meddle with coordinate transformations.
-	 * @return the location of the center of the given point you can use for your nodes in this class
-	 */
-	protected Point getPointCenter(Point pLocation)
-	{
-		float centerX = (pLocation.X + 0.5f) * _dungeon.scale;
-		float centerY = (pLocation.Y + 0.5f) * _dungeon.scale;
-		return new Point((int)centerX, (int)centerY);
-	}
+		foreach (Node node in GetNodes())
+		{
+			ConnectNodeToNeighbours(node);
+		}
+    }
 
+    protected void ConnectNodeToNeighbours(Node node)
+    {
+        Node left = GetNodeAt(node.location.X - (int)dungeon.scale, node.location.Y);
+        Node right = GetNodeAt(node.location.X + (int)dungeon.scale, node.location.Y);
+        Node up = GetNodeAt(node.location.X, node.location.Y - (int)dungeon.scale);
+        Node down = GetNodeAt(node.location.X, node.location.Y + (int)dungeon.scale);
+
+		if (left != null && !node.IsConnectedTo(left)) { AddConnection(node, left); }
+		if (right != null && !node.IsConnectedTo(right)) { AddConnection(node, right); }
+		if (up != null && !node.IsConnectedTo(up)) { AddConnection (node, up); }
+		if (down != null && !node.IsConnectedTo(down)) { AddConnection (node, down); }
+
+        Node leftUp = GetNodeAt(node.location.X - (int)dungeon.scale, node.location.Y - (int)dungeon.scale);
+        Node leftDown = GetNodeAt(node.location.X - (int)dungeon.scale, node.location.Y + (int)dungeon.scale);
+        Node rightUp = GetNodeAt(node.location.X + (int)dungeon.scale, node.location.Y - (int)dungeon.scale);
+        Node rightDown = GetNodeAt(node.location.X + (int)dungeon.scale, node.location.Y + (int)dungeon.scale);
+
+		if (left == null) { leftUp = null; leftDown = null; }
+		if (right == null) { rightUp = null; rightDown = null; }
+		if (up == null) { leftUp = null; rightUp = null; }
+		if (down == null) { leftDown = null; rightDown = null; }
+
+        if (leftUp != null && !node.IsConnectedTo(leftUp)) { AddConnection(node, leftUp); }
+        if (leftDown != null && !node.IsConnectedTo(leftDown)) { AddConnection(node, leftDown); }
+        if (rightUp != null && !node.IsConnectedTo(rightUp)) { AddConnection(node, rightUp); }
+        if (rightDown != null && !node.IsConnectedTo(rightDown)) { AddConnection(node, rightDown); }
+    }
 }

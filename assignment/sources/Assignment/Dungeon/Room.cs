@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
+
 class Room
 {
 
-	Dungeon _dungeon;
+	Dungeon dungeon;
 
 	public List<Room> rightConnections = new List<Room>();
 	public List<Room> bottomConnections = new List<Room>();
@@ -11,10 +12,10 @@ class Room
 
 	public Rectangle area;
 
-	public Room (Rectangle pArea, Dungeon dungeon)
+	public Room (Rectangle area, Dungeon dungeon)
 	{
-		area = pArea;
-		_dungeon = dungeon;
+		this.area = area;
+		this.dungeon = dungeon;
 	}
 
 	public override string ToString()
@@ -38,8 +39,8 @@ class Room
 	/// </summary>
     public Point GetCenterPoint()
     {
-        float centerX = ((area.Left + area.Right) / 2.0f) * _dungeon.scale;
-        float centerY = ((area.Top + area.Bottom) / 2.0f) * _dungeon.scale;
+        float centerX = ((area.Left + area.Right) / 2.0f) * dungeon.scale;
+        float centerY = ((area.Top + area.Bottom) / 2.0f) * dungeon.scale;
         return new Point((int)centerX, (int)centerY);
     }
 

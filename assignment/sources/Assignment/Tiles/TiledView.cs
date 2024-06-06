@@ -17,23 +17,23 @@ abstract class TiledView : GameObject
 	//stores the tiletype for each cell (and with it whether a tile is walkable)
 	private TileType[,] _tileData;
 	//used to reset all data to the default tiletype when requested
-	private TileType _defaultTileType;
+	private TileType defaultTileType;
 	//single sprite, used for rendering all tiles
-	private AnimationSprite _tileSet;
+	private AnimationSprite tileSet;
 
-	public TiledView(int pColumns, int pRows, int pTileSize, TileType pDefaultTileType) {
-		Debug.Assert(pColumns > 0, "Invalid amount of columns passed in: " + pColumns);
-		Debug.Assert(pRows > 0, "Invalid amount of rows passed in: " + pRows);
-		Debug.Assert(pDefaultTileType != null, "Invalid default tile type passed in:" + pDefaultTileType);
+	public TiledView(int columns, int rows, int tileSize, TileType defaultTileType) {
+		Debug.Assert(columns > 0, "Invalid amount of columns passed in: " + columns);
+		Debug.Assert(rows > 0, "Invalid amount of rows passed in: " + rows);
+		Debug.Assert(defaultTileType != null, "Invalid default tile type passed in:" + defaultTileType);
 
-		columns = pColumns;
-		rows = pRows;
+		this.columns = columns;
+		this.rows = rows;
 
-		_defaultTileType = pDefaultTileType;
+		this.defaultTileType = defaultTileType;
 
 		//we use a single sprite to render the whole tileview
-		_tileSet = new AnimationSprite("assets/tileset.png", 3, 1);
-		_tileSet.width = _tileSet.height = pTileSize;
+		tileSet = new AnimationSprite("assets/tileset.png", 3, 1);
+		tileSet.width = tileSet.height = tileSize;
 
 		initializeTiles();
 	}
@@ -50,18 +50,18 @@ abstract class TiledView : GameObject
 		//a 'trick' to do everything in one for loop instead of a nested loop
 		for (int i = 0; i < columns * rows; i++)
 		{
-			_tileData[i % columns, i / columns] = _defaultTileType;
+			_tileData[i % columns, i / columns] = defaultTileType;
 		}
 	}
 
-	public void SetTileType(int pColumn, int pRow, TileType pTileType)
+	public void SetTileType(int column, int row, TileType tileType)
 	{
 		//an example of hardcore defensive coding;)
-		Debug.Assert(pColumn >= 0 && pColumn < columns, "Invalid column passed in: " + pColumn);
-		Debug.Assert(pRow >= 0 && pRow < rows, "Invalid row passed in:" + pRow);
-		Debug.Assert(pTileType != null, "Invalid tile type passed in:" + pTileType);
+		Debug.Assert(column >= 0 && column < columns, "Invalid column passed in: " + column);
+		Debug.Assert(row >= 0 && row < rows, "Invalid row passed in:" + row);
+		Debug.Assert(tileType != null, "Invalid tile type passed in:" + tileType);
 
-		_tileData[pColumn, pRow] = pTileType;
+		_tileData[column, row] = tileType;
 	}
 
 	public TileType GetTileType(int pColumn, int pRow)
@@ -81,10 +81,11 @@ abstract class TiledView : GameObject
 		{
 			for (int row = 0; row < rows; row++)
 			{
-				_tileSet.currentFrame = GetTileType(column, row).id;
-				_tileSet.x = column * _tileSet.width;
-				_tileSet.y = row * _tileSet.height;
-				_tileSet.Render(glContext);
+				if (GetTileType(column, row) == null) continue;
+                tileSet.currentFrame = GetTileType(column, row).id;
+				tileSet.x = column * tileSet.width;
+				tileSet.y = row * tileSet.height;
+				tileSet.Render(glContext);
 			}
 		}
 	}
@@ -95,6 +96,7 @@ abstract class TiledView : GameObject
 	 */
 	public void Generate()
 	{
+		resetAllTilesToDefault();
 		System.Console.WriteLine(this.GetType().Name + ".Generate: Generating tile view...");
 		generate();
 		System.Console.WriteLine(this.GetType().Name + ".Generate: tile view generated.");

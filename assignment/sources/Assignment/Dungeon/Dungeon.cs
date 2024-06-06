@@ -4,21 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-/**
- * The base Dungeon class. 
- * 
- * This class is very limited, it contains:
- *	- a(n empty) list of rooms
- *	- a(n empty) list of doors
- *	- code to visualize all rooms and doors.
- * 
- * TODO:
- * - Read carefully through all the code below, so that you know which helper methods are available to you.
- * - Create a subclass of this class and override the generate method (see the SampleDungeon for an example).
- */ 
+
 abstract class Dungeon : Canvas
 {
-    public Random rand = null;
+    public Random random = null;
     //the (unscaled) dimensions of the dungeon (basically how 'tiles' wide and high)
     public readonly Size size;
 
@@ -42,9 +31,9 @@ abstract class Dungeon : Canvas
 	 * Create empty dungeon instance of the specified size.
 	 * It's empty because it doesn't contain any rooms yet.
 	 */
-	public Dungeon(Size pSize) : base(pSize.Width, pSize.Height)
+	public Dungeon(Size size) : base(size.Width, size.Height)
 	{
-		size = pSize;
+		this.size = size;
 
 		/**/
 		//ignore lines below, this is for rendering scaled canvasses without blurring 
@@ -64,94 +53,94 @@ abstract class Dungeon : Canvas
 	 * 
 	 * @param pMinimumRoomSize the minimum size that a room should have
 	 */
-	public void Generate(int pMinimumRoomSize, int seed)
+	public void Generate(int minimumRoomSize, int seed)
 	{
-        rand = new Random(seed);
+        random = new Random(seed);
         Console.WriteLine(this.GetType().Name + ".Generate:Generating dungeon...");
 
 		rooms.Clear();
 		doors.Clear();
 
-		generate(pMinimumRoomSize);
+		Generate(minimumRoomSize);
 
 		Console.WriteLine($"Total Rooms {rooms.Count}");
 		Console.WriteLine($"Total Doors {doors.Count}");
 		Console.WriteLine(this.GetType().Name + ".Generate:Dungeon generated.");
 
-		if (autoDrawAfterGenerate) draw();
+		if (autoDrawAfterGenerate) Draw();
 	}
 
-    public void Generate(int pMinimumRoomSize)
+    public void StartGeneration(int minimumRoomSize)
     {
-        rand = new Random();
+        random = new Random();
         Console.WriteLine(this.GetType().Name + ".Generate:Generating dungeon...");
 
         rooms.Clear();
         doors.Clear();
 
-        generate(pMinimumRoomSize);
+        Generate(minimumRoomSize);
 
         Console.WriteLine($"Total Rooms {rooms.Count}");
         Console.WriteLine($"Total Doors {doors.Count}");
         Console.WriteLine(this.GetType().Name + ".Generate:Dungeon generated.");
-		if (autoDrawAfterGenerate) draw();
+		if (autoDrawAfterGenerate) Draw();
     }
 
-    protected abstract void generate(int pMinimumRoomSize);
+    protected abstract void Generate(int minimumRoomSize);
 
-	/////////////////////////////////////////////////////////////////////////////////////////
-	///	This section contains helper methods to draw all or specific doors/rooms
-	///	You can call them from your own methods to actually draw the dungeon during/after generation
-	///	These methods do not have to be changed.
+    /////////////////////////////////////////////////////////////////////////////////////////
+    ///	This section contains helper methods to draw all or specific doors/rooms
+    ///	You can call them from your own methods to actually draw the dungeon during/after generation
+    ///	These methods do not have to be changed.
 
-	protected virtual void draw()
+    protected virtual void Draw()
 	{
 		graphics.Clear(Color.Transparent);
-		drawRooms(rooms, wallPen, roomFillBrush);    
-		drawDoors(doors, doorPen);
+		DrawRooms(rooms, wallPen, roomFillBrush);    
+		DrawDoors(doors, doorPen);
 	}
 
-	/**
+    /**
 	 * Draw all rooms in the given list with the given color, eg drawRooms (_rooms, Pen.Black)
 	 * @param pRooms		the list of rooms to draw
 	 * @param pWallColor	the color of the walls
 	 * @param pFillColor	if not null, the color of the inside of the room, if null insides will be transparent
 	 */
-	protected virtual void drawRooms(IEnumerable<Room> pRooms, Pen pWallColor, Brush pFillColor = null)
+    protected virtual void DrawRooms(IEnumerable<Room> pRooms, Pen wallColor, Brush fillColor = null)
 	{
 		foreach (Room room in pRooms)
 		{
-			drawRoom(room, pWallColor, pFillColor);
+			DrawRoom(room, wallColor, fillColor);
 		}
 	}
 
-	/**
+    /**
 	 * Draws a single room in the given color.
 	 * @param pRoom			the room to draw
 	 * @param pWallColor	the color of the walls
 	 * @param pFillColor	if not null, the color of the inside of the room, if null insides will be transparent
 	 */
-	protected virtual void drawRoom (Room pRoom, Pen pWallColor, Brush pFillColor = null)
+    protected virtual void DrawRoom(Room room, Pen wallColor, Brush fillColor = null)
 	{
 		//the -0.5 has two reasons:
 		//- Doing it this way actually makes sure that an area of 0,0,4,4 (x,y,width,height) is draw as an area of 0,0,4,4
 		//- Doing it this way makes sure that an area of 0,0,1,1 is ALSO drawn (which it wouldn't if you used -1 instead 0.5f)
-		if (pFillColor != null) graphics.FillRectangle(pFillColor, pRoom.area.Left, pRoom.area.Top, pRoom.area.Width - 0.5f, pRoom.area.Height - 0.5f);
-		graphics.DrawRectangle(pWallColor, pRoom.area.Left, pRoom.area.Top, pRoom.area.Width - 0.5f, pRoom.area.Height - 0.5f);
+		if (fillColor != null) graphics.FillRectangle(fillColor, room.area.Left, room.area.Top, room.area.Width - 0.5f, room.area.Height - 0.5f);
+		graphics.DrawRectangle(wallColor, room.area.Left, room.area.Top, room.area.Width - 0.5f, room.area.Height - 0.5f);
 	}
 
-	protected virtual void drawDoors(IEnumerable<Door> pDoors, Pen pColor)
+    protected virtual void DrawDoors(IEnumerable<Door> doors, Pen color)
 	{
-		foreach (Door door in pDoors)
+		foreach (Door door in doors)
 		{
-			drawDoor(door, pColor);
+			DrawDoor(door, color);
 		}
 	}
 
-	protected virtual void drawDoor (Door pDoor, Pen pColor)
+    protected virtual void DrawDoor(Door door, Pen color)
 	{
 		//note the 0.5, 0.5, this forces the drawing api to draw at least 1 pixel ;)
-		graphics.DrawRectangle(pColor, pDoor.area.X, pDoor.area.Y, pDoor.area.Width-.5f, pDoor.area.Height-.5f);
+		graphics.DrawRectangle(color, door.area.X, door.area.Y, door.area.Width-.5f, door.area.Height-.5f);
 	}
 
 	//////////////////////////////////////////////////////////////////////////////////////////////
@@ -163,7 +152,9 @@ abstract class Dungeon : Canvas
 		return "Dungeon: implement/override this method to print info about all rooms and doors";
 	}
 
+	/// <summary>
 	/// gets door at X,Y
+	/// </summary>
 	public Room GetRoomAt(int x, int y)
 	{
 		foreach (Room room in rooms)
@@ -182,21 +173,26 @@ abstract class Dungeon : Canvas
 		return null;
 	}
 
-    public List<Room> GetRoomsIn(Rectangle rect)
+	/// <summary>
+	/// gets all rooms in the rectengle
+	/// </summary>
+    public List<Room> GetRoomsIn(Rectangle areaToCheck)
     {
 		List<Room> toReturn = new List<Room>();
         foreach (Room room in rooms)
         {
-            Rectangle area = room.area;
+            Rectangle roomArea = room.area;
             if (
-				rect.X + rect.Width >= area.X &&
-                rect.X <= area.X + area.Width &&
-                rect.Y + rect.Height >= area.Y &&
-                rect.Y <= area.Y + area.Height)
+				areaToCheck.X + areaToCheck.Width >= roomArea.X &&
+                areaToCheck.X <= roomArea.X + roomArea.Width &&
+                areaToCheck.Y + areaToCheck.Height >= roomArea.Y &&
+                areaToCheck.Y <= roomArea.Y + roomArea.Height)
             {
                 toReturn.Add(room);
             }
         }
         return toReturn;
     }
+
+	public void SetScale(float scale) { this.scale = scale; }
 }

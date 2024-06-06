@@ -18,7 +18,7 @@ class NodeLabelDrawer : Canvas
 		Console.WriteLine("* L key to toggle node label display.");
 		Console.WriteLine("-----------------------------------------------------------------------------");
 
-		_labelFont = new Font(SystemFonts.DefaultFont.FontFamily, pNodeGraph.nodeSize, FontStyle.Bold);
+		_labelFont = new Font(SystemFonts.DefaultFont.FontFamily, pNodeGraph.GetNodeSize(), FontStyle.Bold);
 		_graph = pNodeGraph;
 	}
 
@@ -34,19 +34,19 @@ class NodeLabelDrawer : Canvas
 		{
 			_showLabels = !_showLabels;
 			graphics.Clear(Color.Transparent);
-			if (_showLabels) drawLabels();
+			if (_showLabels) DrawLabels();
 		}
 	}
 
-	/////////////////////////////////////////////////////////////////////////////////////////
-	/// NodeGraph visualization helper methods
+    /////////////////////////////////////////////////////////////////////////////////////////
+    /// NodeGraph visualization helper methods
 
-	protected virtual void drawLabels()
+    protected virtual void DrawLabels()
 	{
-		foreach (Node node in _graph.nodes) drawNode(node);
+		foreach (Node node in _graph.GetNodes()) DrawNode(node);
 	}
 
-	protected virtual void drawNode(Node pNode)
+    protected virtual void DrawNode(Node pNode)
 	{
 		SizeF size = graphics.MeasureString(pNode.id, _labelFont);
 		graphics.DrawString(pNode.id, _labelFont, Brushes.Black, pNode.location.X - size.Width / 2, pNode.location.Y - size.Height / 2);

@@ -13,11 +13,10 @@ using System.Drawing;
  */
 class Node
 {
-	public readonly List<Node> connections = new List<Node>();
+	readonly List<Node> connections = new List<Node>();
 
 	//node data
 	public readonly Point location;
-	//what other data could/should you add here to implement the required pathfinding algorithms?
 
 	//Every node has a id that we can display on screen for debugging
 	public readonly string id;
@@ -34,22 +33,23 @@ class Node
 
 		//use an autoincrementing id as label
 		id = ""+lastID++;
-		System.Console.WriteLine(id);
+		System.Console.WriteLine($"New node Created ID:{id}");
 	}
 
-    public Node(Point pLocation, NodeGraph nodeGraph) : this(pLocation)
+    public Node(Point location, NodeGraph nodeGraph) : this(location)
     {
-		nodeGraph.nodes.Add(this);
+		nodeGraph.AddNode(this);
     }
 
     public override string ToString()
 	{
-		return id;
+		return $"Node ID:{id}";
 	}
 
-    public bool IsConnected(Node node)
-	{
-		return connections.Contains(node);
-	}
+	public List<Node> GetConnections() { return connections; }
+
+	public void AddConnection(Node node) { connections.Add(node); }
+
+	public bool IsConnectedTo(Node node) {  return connections.Contains(node); }
 }
 
