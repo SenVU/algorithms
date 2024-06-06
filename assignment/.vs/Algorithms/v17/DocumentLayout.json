@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Dropbox\\HW\\saxion\\courses_cmgt\\1_4_algorithms\\102_assignments\\cmgt.algorithms.student\\assignment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|d:\\dropbox\\hw\\saxion\\courses_cmgt\\1_4_algorithms\\102_assignments\\cmgt.algorithms.student\\assignment\\sources\\algorithmsassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\algorithmsassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|d:\\dropbox\\hw\\saxion\\courses_cmgt\\1_4_algorithms\\102_assignments\\cmgt.algorithms.student\\assignment\\sources\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AlgorithmsAssignment.cs",
+              "DocumentMoniker": "D:\\Dropbox\\HW\\saxion\\courses_cmgt\\1_4_algorithms\\102_assignments\\cmgt.algorithms.student\\assignment\\sources\\AlgorithmsAssignment.cs",
+              "RelativeDocumentMoniker": "sources\\AlgorithmsAssignment.cs",
+              "ToolTip": "D:\\Dropbox\\HW\\saxion\\courses_cmgt\\1_4_algorithms\\102_assignments\\cmgt.algorithms.student\\assignment\\sources\\AlgorithmsAssignment.cs",
+              "RelativeToolTip": "sources\\AlgorithmsAssignment.cs",
+              "ViewState": "AQIAAKQAAAAAAAAAAADgv7gAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T16:43:38.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Dropbox\\HW\\saxion\\courses_cmgt\\1_4_algorithms\\102_assignments\\cmgt.algorithms.student\\assignment\\sources\\Program.cs",
+              "RelativeDocumentMoniker": "sources\\Program.cs",
+              "ToolTip": "D:\\Dropbox\\HW\\saxion\\courses_cmgt\\1_4_algorithms\\102_assignments\\cmgt.algorithms.student\\assignment\\sources\\Program.cs",
+              "RelativeToolTip": "sources\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T16:43:24.637Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
