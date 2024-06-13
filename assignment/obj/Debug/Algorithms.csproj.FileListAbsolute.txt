@@ -33,3 +33,10 @@ C:\Users\sen\Desktop\GitKraken\algorithms\assignment\obj\Debug\Algorithms.csproj
 C:\Users\sen\Desktop\GitKraken\algorithms\assignment\obj\Debug\Algorithms.csproj.CoreCompileInputs.cache
 C:\Users\sen\Desktop\GitKraken\algorithms\assignment\obj\Debug\dcg.exe
 C:\Users\sen\Desktop\GitKraken\algorithms\assignment\obj\Debug\dcg.pdb
+C:\Users\sen\Desktop\GIT\algorithms\assignment\bin\Debug\dcg.exe.config
+C:\Users\sen\Desktop\GIT\algorithms\assignment\bin\Debug\dcg.exe
+C:\Users\sen\Desktop\GIT\algorithms\assignment\bin\Debug\dcg.pdb
+C:\Users\sen\Desktop\GIT\algorithms\assignment\obj\Debug\Algorithms.csproj.AssemblyReference.cache
+C:\Users\sen\Desktop\GIT\algorithms\assignment\obj\Debug\Algorithms.csproj.CoreCompileInputs.cache
+C:\Users\sen\Desktop\GIT\algorithms\assignment\obj\Debug\dcg.exe
+C:\Users\sen\Desktop\GIT\algorithms\assignment\obj\Debug\dcg.pdb

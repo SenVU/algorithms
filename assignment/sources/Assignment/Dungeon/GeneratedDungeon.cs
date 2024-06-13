@@ -10,46 +10,18 @@ internal class GeneratedDungeon : Dungeon
     public GeneratedDungeon(Size size) : base(size) { }
 
 
-    protected override void Generate(int minimumRoomSize)
+    protected override void Generate()
     {
         // clear all lists (just in case)
         roomsQueue.Clear();
         roomsDone.Clear();
 
-        //save the amount of loops so i dont go over the max
-        int loop = 0;
-
         //create the first room
         roomsQueue.Add(new Room(new Rectangle(0, 0, size.Width, size.Height),this));
 
         // if the roomsTODO list has rooms and you have not exceeded maxloops check if the rooms in roomsTODO can be split
-        while (roomsQueue.Count > 0 && loop < AlgorithmsAssignment.maxGenerationLoops)
-        {
-            for (int i = roomsQueue.Count - 1; i >= 0; i--)
-            {
-                //get room at i
-                Room room = roomsQueue[i];
-
-                // rooms can be split if the size is bigger that pMinimumRoomSize * 2
-                // also a random chanse to finalize the room called finalizeRoomChanse
-                if ((room.area.Width > minimumRoomSize * 2 || room.area.Height > minimumRoomSize * 2)&&random.NextDouble()>AlgorithmsAssignment.finalizeRoomChanse)
-                {
-                    bool splitsHorizontal = room.area.Width >= room.area.Height;
-                    splitRoom(room, minimumRoomSize, splitsHorizontal);
-                    roomsQueue.Remove(room);
-                }
-                // if the rest fails the room should not be split and will be moved to the roomsDone list
-                else
-                {
-                    rooms.Add(room);
-                    roomsQueue.Remove(room);
-                    continue;
-                }
-            }
-            Console.WriteLine($"loop {loop} finished");
-            loop++;
-        }
-        addLeftoverRooms();
+        GenerateRooms();
+        AddLeftoverRooms();
 
         // this wil generate a door between all possible doors id generateAllDoors is true
         if (AlgorithmsAssignment.generateAllDoors)
@@ -66,10 +38,45 @@ internal class GeneratedDungeon : Dungeon
         ShrinkRooms();
     }
 
+
+    /// <summary>
+    /// loops through all queued rooms untill none are left or the max amount of loops is reached
+    /// </summary>
+    void GenerateRooms()
+    {
+        //save the amount of loops so i dont go over the max
+        int loop = 0;
+
+        while (roomsQueue.Count > 0 && loop < AlgorithmsAssignment.maxGenerationLoops)
+        {
+            //get room at 0
+            Room currentRoom = roomsQueue[0];
+
+            // rooms can be split if the size is bigger that pMinimumRoomSize * 2
+            // also a random chanse to finalize the room called finalizeRoomChanse
+            if ((currentRoom.area.Width > AlgorithmsAssignment.minRoomSize * 2 || currentRoom.area.Height > AlgorithmsAssignment.minRoomSize * 2) && random.NextDouble() > AlgorithmsAssignment.finalizeRoomChanse)
+            {
+                bool splitsHorizontal = currentRoom.area.Width >= currentRoom.area.Height;
+                SplitRoom(currentRoom, AlgorithmsAssignment.minRoomSize, splitsHorizontal);
+                roomsQueue.Remove(currentRoom);
+            }
+            // if the rest fails the room should not be split and will be moved to the roomsDone list
+            else
+            {
+                rooms.Add(currentRoom);
+                roomsQueue.Remove(currentRoom);
+                continue;
+            }
+
+            Console.WriteLine($"loop {loop} finished");
+            loop++;
+        }
+    }
+
     /// <summary>
     /// will split a room
     /// </summary>
-    void splitRoom(Room room, int minRoomSize, bool splitsHorizontal)
+    void SplitRoom(Room room, int minRoomSize, bool splitsHorizontal)
     {
         //splitsHorizontal = true;
         float randF = (float)random.NextDouble();
@@ -131,7 +138,7 @@ internal class GeneratedDungeon : Dungeon
         foreach (Room room in rooms)
         {
             foreach (Room connection in room.rightConnections) { addDoorRight(room, connection); }
-            foreach (Room connection in room.bottomConnections) { addDoorBottom(room, connection); }
+            foreach (Room connection in room.bottomConnections) { AddDoorBottom(room, connection); }
         }
     }
 
@@ -151,7 +158,7 @@ internal class GeneratedDungeon : Dungeon
     /// <summary>
     /// will add a room between a room and an ajacent room on the bottom
     /// </summary>
-    void addDoorBottom(Room room, Room connection)
+    void AddDoorBottom(Room room, Room connection)
     {
         int minWidth = Math.Max(room.area.X + AlgorithmsAssignment.maxShrink + 1, connection.area.X + AlgorithmsAssignment.maxShrink + 1);
         int maxWidth = Math.Min(room.area.X + room.area.Width - 1-AlgorithmsAssignment.maxShrink, connection.area.X + connection.area.Width - 1-AlgorithmsAssignment.maxShrink);
@@ -164,7 +171,7 @@ internal class GeneratedDungeon : Dungeon
     /// <summary>
     /// adds the remaining TODO rooms to the main list
     /// </summary>
-    void addLeftoverRooms()
+    void AddLeftoverRooms()
     {
         foreach (Room room in roomsQueue)
         {

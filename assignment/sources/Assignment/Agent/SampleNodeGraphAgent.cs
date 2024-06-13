@@ -13,11 +13,7 @@ class SampleNodeGraphAgent : NodeGraphAgent
 	{
 		SetOrigin(width / 2, height / 2);
 
-		//position ourselves on a random node
-		if (pNodeGraph.GetNodes().Count > 0)
-		{
-			jumpToNode(pNodeGraph.GetNodes()[Utils.Random(0, pNodeGraph.GetNodes().Count)]);
-		}
+		GotoRandomNode();
 
 		//listen to nodeclicks
 		pNodeGraph.OnNodeLeftClicked += OnNodeClickHandler;
@@ -34,7 +30,7 @@ class SampleNodeGraphAgent : NodeGraphAgent
 		if (_target == null) return;
 
 		//Move towards the target node, if we reached it, clear the target
-		if (moveTowardsNode(_target))
+		if (MoveTowardsNode(_target))
 		{
 			_target = null;
 		}

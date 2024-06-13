@@ -18,7 +18,7 @@ class SampleTiledView : TiledView
 	 * Fill the tileview with random data instead.
 	 * In your subclass, you should set the tiletype correctly based on the provided dungeon contents.
 	 */
-	protected override void generate()
+	protected override void Generate()
 	{
 		for (int i = 0; i < columns * rows; i++)
 		{

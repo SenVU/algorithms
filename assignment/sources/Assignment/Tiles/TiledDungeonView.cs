@@ -1,21 +1,15 @@
 ﻿using GXPEngine;
 
-/**
- * This is an example subclass of the TiledView that just generates random tiles.
- */
+
 class TiledDungeonView : TiledView
 {
 	Dungeon dungeon = null;
 	public TiledDungeonView(Dungeon dungeon) : base(dungeon.size.Width, dungeon.size.Height, (int)dungeon.scale, TileType.WALL)
 	{
 		this.dungeon = dungeon;
-	}
+    }
 
-	/**
-	 * Fill the tileview with random data instead.
-	 * In your subclass, you should set the tiletype correctly based on the provided dungeon contents.
-	 */
-	protected override void generate()
+	protected override void Generate()
 	{
 		foreach (Room room in dungeon.rooms)
 		{

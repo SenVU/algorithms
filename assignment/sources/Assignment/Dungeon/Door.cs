@@ -62,10 +62,13 @@ class Door
 		return new Point(area.X + area.Width / 2, area.Y + area.Height / 2);
 	}
 
+	/// <summary>
+	/// generates a node at each end of the door
+	/// </summary>
 	public void GenerateNodes(NodeGraph nodeGraph)
 	{
-		Node nodeA = new Node(new Point((int)(dungeon.scale * area.X) + ((int)dungeon.scale / 2), (int)(dungeon.scale * area.Y) + ((int)dungeon.scale / 2)), nodeGraph);
-		Node nodeB = new Node(new Point((int)(dungeon.scale * (area.X + area.Width - 1)) + ((int)dungeon.scale / 2), (int)(dungeon.scale * (area.Y + area.Height - 1)) + ((int)dungeon.scale / 2)), nodeGraph);
+		Node nodeA = nodeGraph.TryPlaceNode(new Point((int)(dungeon.scale * area.X) + ((int)dungeon.scale / 2), (int)(dungeon.scale * area.Y) + ((int)dungeon.scale / 2)));
+		Node nodeB = nodeGraph.TryPlaceNode(new Point((int)(dungeon.scale * (area.X + area.Width - 1)) + ((int)dungeon.scale / 2), (int)(dungeon.scale * (area.Y + area.Height - 1)) + ((int)dungeon.scale / 2)));
 
 		nodeGraph.AddConnection(nodeA, nodeB);
 		Node roomANode = nodeGraph.GetNodeAt(roomA.GetCenterPoint());

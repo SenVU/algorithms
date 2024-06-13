@@ -2,13 +2,7 @@ using GXPEngine;
 using GXPEngine.Core;
 using System.Diagnostics;
 
-/**
- * A TileView class that allows you to set a 2D array of tiles and render them on screen.
- * If you are used to an MVC setup, this class is both data and view all rolled into one.
- * Also see the 'A note on architecture' document on BlackBoard.
- * 
- * Subclass this class and override the generate method (note the lower case).
- */
+
 abstract class TiledView : GameObject
 {
 	//the dimensions of the tileview
@@ -35,17 +29,19 @@ abstract class TiledView : GameObject
 		tileSet = new AnimationSprite("assets/tileset.png", 3, 1);
 		tileSet.width = tileSet.height = tileSize;
 
-		initializeTiles();
+		InitializeTiles();
 	}
 
-	private void initializeTiles ()
+    /// <summary>
+	/// initialize all tiles to default
+	/// </summary>
+    private void InitializeTiles ()
 	{
-		//initialize all tiles to walkable
 		_tileData = new TileType[columns, rows];
-		resetAllTilesToDefault();
+		ResetAllTilesToDefault();
 	}
 
-	protected void resetAllTilesToDefault()
+	protected void ResetAllTilesToDefault()
 	{
 		//a 'trick' to do everything in one for loop instead of a nested loop
 		for (int i = 0; i < columns * rows; i++)
@@ -94,15 +90,15 @@ abstract class TiledView : GameObject
 	 * Trigger the tile view generation process, do not override this method, 
 	 * but override generate (note the lower case) instead.
 	 */
-	public void Generate()
+	public void StartGeneration()
 	{
-		resetAllTilesToDefault();
+		ResetAllTilesToDefault();
 		System.Console.WriteLine(this.GetType().Name + ".Generate: Generating tile view...");
-		generate();
+		Generate();
 		System.Console.WriteLine(this.GetType().Name + ".Generate: tile view generated.");
 	}
 
-	protected abstract void generate();
+	protected abstract void Generate();
 
 }
 

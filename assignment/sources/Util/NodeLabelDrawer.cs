@@ -38,12 +38,15 @@ class NodeLabelDrawer : Canvas
 		}
 	}
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    /// NodeGraph visualization helper methods
+	/////////////////////////////////////////////////////////////////////////////////////////
+	/// NodeGraph visualization helper methods
 
-    protected virtual void DrawLabels()
+	protected virtual void DrawLabels()
 	{
-		foreach (Node node in _graph.GetNodes()) DrawNode(node);
+		foreach (Node node in _graph.GetNodes())
+		{
+			DrawNode(node);
+		}
 	}
 
     protected virtual void DrawNode(Node pNode)

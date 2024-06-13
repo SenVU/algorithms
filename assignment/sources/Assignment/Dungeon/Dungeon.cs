@@ -53,7 +53,7 @@ abstract class Dungeon : Canvas
 	 * 
 	 * @param pMinimumRoomSize the minimum size that a room should have
 	 */
-	public void Generate(int minimumRoomSize, int seed)
+	public void StartGeneration(int seed)
 	{
         random = new Random(seed);
         Console.WriteLine(this.GetType().Name + ".Generate:Generating dungeon...");
@@ -61,7 +61,7 @@ abstract class Dungeon : Canvas
 		rooms.Clear();
 		doors.Clear();
 
-		Generate(minimumRoomSize);
+		Generate();
 
 		Console.WriteLine($"Total Rooms {rooms.Count}");
 		Console.WriteLine($"Total Doors {doors.Count}");
@@ -70,23 +70,12 @@ abstract class Dungeon : Canvas
 		if (autoDrawAfterGenerate) Draw();
 	}
 
-    public void StartGeneration(int minimumRoomSize)
+    public void StartGeneration()
     {
-        random = new Random();
-        Console.WriteLine(this.GetType().Name + ".Generate:Generating dungeon...");
-
-        rooms.Clear();
-        doors.Clear();
-
-        Generate(minimumRoomSize);
-
-        Console.WriteLine($"Total Rooms {rooms.Count}");
-        Console.WriteLine($"Total Doors {doors.Count}");
-        Console.WriteLine(this.GetType().Name + ".Generate:Dungeon generated.");
-		if (autoDrawAfterGenerate) Draw();
+        StartGeneration(Environment.TickCount);
     }
 
-    protected abstract void Generate(int minimumRoomSize);
+    protected abstract void Generate();
 
     /////////////////////////////////////////////////////////////////////////////////////////
     ///	This section contains helper methods to draw all or specific doors/rooms

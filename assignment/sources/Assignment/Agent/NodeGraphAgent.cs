@@ -11,9 +11,9 @@ using System.Diagnostics;
 abstract class NodeGraphAgent : AnimationSprite
 {
 	NodeGraph nodeGraph = null;
-    protected Node standingNode = null;
+	protected Node standingNode = null;
 
-    protected const int regularSpeed = 1;
+	protected const int regularSpeed = 1;
 	protected const int fastSpeed = 10;
 	protected const int speedUpKey = Key.LEFT_CTRL;
 
@@ -29,14 +29,12 @@ abstract class NodeGraphAgent : AnimationSprite
 	//override in subclass to implement any functionality
 	protected abstract void Update();
 
-	/////////////////////////////////////////////////////////////////////////////////////////
-	///	Movement helper methods
 
-	/**
-	 * Moves towards the given node with either REGULAR_SPEED or FAST_TRAVEL_SPEED 
-	 * based on whether the RIGHT_CTRL key is pressed.
-	 */
-	protected virtual bool moveTowardsNode(Node target)
+	/// <summary>
+	/// moves towards the given node
+	/// returns true if the node is reached
+	/// </summary>
+	protected virtual bool MoveTowardsNode(Node target)
 	{
 		float speed = Input.GetKey(speedUpKey) ? fastSpeed : regularSpeed;
 		//increase our current frame based on time passed and current speed
@@ -49,7 +47,7 @@ abstract class NodeGraphAgent : AnimationSprite
 
 		if (delta.Length() < speed)
 		{
-			jumpToNode(target);
+			JumpToNode(target);
 			return true;
 		}
 		else
@@ -64,22 +62,35 @@ abstract class NodeGraphAgent : AnimationSprite
 		}
 	}
 
-	/**
-	 * Jumps towards the given node immediately
-	 */
-	protected virtual void jumpToNode(Node node)
+	/// <summary>
+	/// Jumps towards the given node immediately
+	/// </summary>
+	protected virtual void JumpToNode(Node node)
 	{
 		x = node.location.X;
 		y = node.location.Y;
 	}
 
+
+	/// <summary>
+	/// selects a random node and jumps to it immediately
+	/// </summary>
 	public Node GotoRandomNode()
 	{
-        Node randomNode = nodeGraph.GetNodes()[Utils.Random(0, nodeGraph.GetNodes().Count)];
-        jumpToNode(randomNode);
-		standingNode = randomNode;
-		return randomNode;
-    }
+		if (nodeGraph.GetNodes().Length > 0)
+		{
+			//Node randomNode = nodeGraph.GetNodes()[Utils.Random(0, nodeGraph.GetNodes().Count)];
+			Node randomNode = Array2D<Node>.GetRandomForm2DArray(nodeGraph.GetNodes());
+			JumpToNode(randomNode);
+			standingNode = randomNode;
+			return randomNode;
+		}
+		return null;
+	}
 
+	public bool IsIdle()
+	{
+		return standingNode != null;
+	}
 }
 

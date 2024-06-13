@@ -4,7 +4,7 @@ using GXPEngine.OpenGL;
 
 class AlgorithmsAssignment : Game
 {
-
+	public static AlgorithmsAssignment instance;
     Dungeon dungeon = null;
 
 	NodeGraph nodeGraph = null;
@@ -14,20 +14,25 @@ class AlgorithmsAssignment : Game
 	PathFinder pathFinder = null;
 
 	//common settings
-	const int dungeonScale = 15;                // MIN OF 2
-	const int minRoomSize = 18;
+	public const int screenWidth = 1920;
+    public const int screenHeight = 1080;
 
-	public static int maxShrink = 3;            // MAX OF (MIN_ROOM_SIZE/2)-1 (inclusive)
-	public static int minShrink = 1;
+    public const int dungeonScale = 10;                // MIN OF 2
+	public const int minRoomSize = 18;
 
-    public static int maxGenerationLoops = 100000;
-    public static float finalizeRoomChanse = .005f;
-    public static bool generateAllDoors = false;
+	public const int maxShrink = 3;            // MAX OF (minRoomSize/2)-1 (inclusive)
+    public const int minShrink = 1;
 
-	public static bool nodeGraphHighQuality = true;
+    public const int maxGenerationLoops = 1000000;
+    public const float finalizeRoomChanse = .005f;
+    public const bool generateAllDoors = false;
 
-    public AlgorithmsAssignment() : base(1920, 1080, false, false, -1, -1, false)
+	public const bool nodeGraphHighQuality = true;
+	public const bool nodeGraphHighQualityDiagonals = true; // only works if nodeGraphHighQuality is true
+
+    public AlgorithmsAssignment() : base(screenWidth, screenHeight, false, false, -1, -1, false)
 	{
+		instance = this;
 		//set our default background color and title
 		GL.ClearColor(0, 0, 0, 1);
 		GL.glfwSetWindowTitle("Algorithms Game");
@@ -41,24 +46,26 @@ class AlgorithmsAssignment : Game
         dungeon?.SetScale(dungeonScale);
 
 		//Tell the dungeon to generate rooms and doors with the given MIN_ROOM_SIZE
-		dungeon?.StartGeneration(minRoomSize);
-		
+		dungeon?.StartGeneration();
 
-		/////////////////////////////////////////////////////////////////////////////////////////
-		/// ASSIGNMENT 2 : GRAPHS, AGENTS & TILES
-		///							
-		/// SKIP THIS BLOCK UNTIL YOU'VE FINISHED ASSIGNMENT 1 AND ASKED FOR TEACHER FEEDBACK !
 
-		/////////////////////////////////////////////////////////////
-		//Assignment 2.1 Sufficient (Mandatory) High Level NodeGraph
-		//
-		//TODO: Study assignment 2.1 on blackboard
-		//TODO: Study the NodeGraph and Node classes
-		//TODO: Study the SampleDungeonNodeGraph class and try it out below
-		//TODO: Comment out the SampleDungeonNodeGraph again, implement a HighLevelDungeonNodeGraph class and uncomment it below
+        /////////////////////////////////////////////////////////////////////////////////////////
+        /// ASSIGNMENT 2 : GRAPHS, AGENTS & TILES
+        ///							
+        /// SKIP THIS BLOCK UNTIL YOU'VE FINISHED ASSIGNMENT 1 AND ASKED FOR TEACHER FEEDBACK !
 
-		//_graph = new SampleDungeonNodeGraph(_dungeon);
-		nodeGraph = new HighLevelDungeonNodeGraph(dungeon);
+        /////////////////////////////////////////////////////////////
+        //Assignment 2.1 Sufficient (Mandatory) High Level NodeGraph
+        //
+        //TODO: Study assignment 2.1 on blackboard
+        //TODO: Study the NodeGraph and Node classes
+        //TODO: Study the SampleDungeonNodeGraph class and try it out below
+        //TODO: Comment out the SampleDungeonNodeGraph again, implement a HighLevelDungeonNodeGraph class and uncomment it below
+
+        //_graph = new SampleDungeonNodeGraph(_dungeon);
+        if (nodeGraphHighQuality) { nodeGraph = new ComplexDungeonNodeGraph(dungeon); }
+        else { nodeGraph = new DungeonNodeGraph(dungeon);; }
+        
         //_graph = new LowLevelDungeonNodeGraph(_dungeon);
 
         nodeGraph?.StartGeneration();
@@ -71,7 +78,7 @@ class AlgorithmsAssignment : Game
         //TODO: Comment out the SampleNodeGraphAgent again, implement an OnGraphWayPointAgent class and uncomment it below
 
         //agent = new OnGraphWayPointAgent(nodeGraph);
-        agent = new RandomPathFindOnGraphWayPointAgent(nodeGraph);
+        agent = new RandomPathFindWayPointAgent(nodeGraph);
 
         ////////////////////////////////////////////////////////////
         //Assignment 2.2 Good (Optional) TiledView
@@ -83,7 +90,7 @@ class AlgorithmsAssignment : Game
 
         //tiledView = new SampleTiledView(dungeon, TileType.GROUND);
         tiledView = new TiledDungeonView(dungeon); 
-        tiledView?.Generate();
+        tiledView?.StartGeneration();
 
 		////////////////////////////////////////////////////////////
 		//Assignment 2.2 Good (Optional) RandomWayPointAgent
@@ -152,17 +159,17 @@ class AlgorithmsAssignment : Game
 	{
 		while (false && dungeon.rooms.Count!=60)
 		{
-            dungeon.StartGeneration(minRoomSize);
+            dungeon.StartGeneration();
             nodeGraph.StartGeneration();
-            tiledView?.Generate();
+            tiledView?.StartGeneration();
             agent.GotoRandomNode();
         }
 
         if (Input.GetKey(Key.R))
 		{
-			dungeon.StartGeneration(minRoomSize);
+			dungeon.StartGeneration();
 			nodeGraph.StartGeneration();
-            tiledView?.Generate();
+            tiledView?.StartGeneration();
 			agent.GotoRandomNode();
         }
 	}

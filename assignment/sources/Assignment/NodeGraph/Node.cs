@@ -27,18 +27,18 @@ class Node
 	 * @param pLocation the position of this node
 	 * @param pLabel a label for the node, if null a unique id is assigned.
 	 */
-	public Node(Point pLocation)
+	public Node(Point location)
 	{
-		location = pLocation;
+		this.location = location;
 
 		//use an autoincrementing id as label
 		id = ""+lastID++;
-		System.Console.WriteLine($"New node Created ID:{id}");
+		System.Console.WriteLine($"New node Created ID:{id} (X:{location.X},Y:{location.Y})");
 	}
 
     public Node(Point location, NodeGraph nodeGraph) : this(location)
     {
-		nodeGraph.AddNode(this);
+		nodeGraph.AddNode(this, location.X, location.Y);
     }
 
     public override string ToString()
