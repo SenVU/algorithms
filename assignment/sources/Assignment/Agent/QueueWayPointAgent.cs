@@ -4,15 +4,12 @@ class QueueWayPointAgent : NodeGraphAgent
 {
 	//Current target to move towards
 	//Node previousTarget = null;
-	List<Node> TargetQueue = new List<Node>();
+	protected List<Node> TargetQueue = new List<Node>();
 
 
 	public QueueWayPointAgent(NodeGraph nodeGraph) : base(nodeGraph)
 	{
 		SetOrigin(width / 2, height / 2);
-
-		//position ourselves on a random node
-		GotoRandomNode();
 
 		//listen to nodeclicks
 		nodeGraph.OnNodeLeftClicked += OnNodeClickHandler;
@@ -36,30 +33,36 @@ class QueueWayPointAgent : NodeGraphAgent
 		//Move towards the first node in the queue, if we reached it, clear it
 		if (MoveTowardsNode(TargetQueue[0]))
 		{
-			standingNode = TargetQueue[0];
+            if (TargetQueue.Count == 1)
+                standingNode = TargetQueue[0];
 			TargetQueue.RemoveAt(0);
-
-			if (TargetQueue.Count>0) { standingNode = null; }
-		}
+            if (standingNode != null && TargetQueue.Count > 0) { standingNode = null; }
+        }
 	}
 
-	public void AddToQueue(Node node)
+	public virtual void AddToQueue(Node target)
 	{
 		// check if there is a queue
 		if (TargetQueue.Count > 0)
 		{
 			Node lastInQueue = TargetQueue[TargetQueue.Count - 1];
 			// check if the node is connected to the lastInQueue
-			if (lastInQueue.IsConnectedTo(node))
+			if (lastInQueue.IsConnectedTo(target))
 			{
-				TargetQueue.Add(node);
+				TargetQueue.Add(target);
 			}
 			return;
 		}
 		// else check from the standingNode
-		else if (standingNode.IsConnectedTo(node))
+		else if (standingNode.IsConnectedTo(target))
 		{
-			TargetQueue.Add(node);
+			TargetQueue.Add(target);
 		}
 	}
+
+    public override Node GotoRandomNode(int seed)
+    {
+		TargetQueue.Clear();
+        return base.GotoRandomNode(seed);
+    }
 }

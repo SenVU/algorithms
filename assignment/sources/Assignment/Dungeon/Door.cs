@@ -26,7 +26,7 @@ class Door
 
 	public Door(Point location, Dungeon dungeon, bool horizontal)
 	{
-		int maxShrink = AlgorithmsAssignment.maxShrink;
+		int maxShrink = AlgorithmsAssignment.MAX_ROOM_SHRINK;
 		this.dungeon = dungeon;
 		if (horizontal) this.area = new Rectangle(location.X - maxShrink - 1, location.Y, (maxShrink) * 2 + 3, 1);
 		else this.area = new Rectangle(location.X, location.Y - maxShrink - 1, 1, (maxShrink) * 2 + 3);
@@ -62,20 +62,7 @@ class Door
 		return new Point(area.X + area.Width / 2, area.Y + area.Height / 2);
 	}
 
-	/// <summary>
-	/// generates a node at each end of the door
-	/// </summary>
-	public void GenerateNodes(NodeGraph nodeGraph)
-	{
-		Node nodeA = nodeGraph.TryPlaceNode(new Point((int)(dungeon.scale * area.X) + ((int)dungeon.scale / 2), (int)(dungeon.scale * area.Y) + ((int)dungeon.scale / 2)));
-		Node nodeB = nodeGraph.TryPlaceNode(new Point((int)(dungeon.scale * (area.X + area.Width - 1)) + ((int)dungeon.scale / 2), (int)(dungeon.scale * (area.Y + area.Height - 1)) + ((int)dungeon.scale / 2)));
-
-		nodeGraph.AddConnection(nodeA, nodeB);
-		Node roomANode = nodeGraph.GetNodeAt(roomA.GetCenterPoint());
-		Node roomBNode = nodeGraph.GetNodeAt(roomB.GetCenterPoint());
-
-		if (roomANode != null) nodeGraph.AddConnection(nodeA, roomANode);
-		if (roomBNode != null) nodeGraph.AddConnection(nodeB, roomBNode);
-	}
+	public Room GetRoomA() { return roomA; }
+	public Room GetRoomB() { return roomB; }
 }
 

@@ -32,8 +32,8 @@ abstract class PathFinder : Canvas
 	public PathFinder (NodeGraph pGraph) : base (pGraph.width, pGraph.height)
 	{
 		nodeGraph = pGraph;
-		nodeGraph.OnNodeShiftLeftClicked += (node) => { startNode = node; draw(); };
-		nodeGraph.OnNodeShiftRightClicked += (node) => { endNode = node; draw(); };
+		nodeGraph.OnNodeShiftLeftClicked += (node) => { startNode = node; Draw(); };
+		nodeGraph.OnNodeShiftRightClicked += (node) => { endNode = node; Draw(); };
 
 		Console.WriteLine("\n-----------------------------------------------------------------------------");
 		Console.WriteLine(this.GetType().Name + " created.");
@@ -47,9 +47,9 @@ abstract class PathFinder : Canvas
 	/////////////////////////////////////////////////////////////////////////////////////////
 	/// Core PathFinding methods
 
-	public List<Node> Generate(Node from, Node to)
+	public List<Node> GeneratePath(Node from, Node to)
 	{
-		System.Console.WriteLine(this.GetType().Name + ".Generate: Generating path...");
+		Console.WriteLine(this.GetType().Name + ".Generate: Generating path...");
 
 		lastCalculatedPath = null;
 		startNode = from;
@@ -61,10 +61,10 @@ abstract class PathFinder : Canvas
 		}
 		else
 		{
-			lastCalculatedPath = generate(from, to);
+			lastCalculatedPath = Generate(from, to);
 		}
 
-		draw();
+		Draw();
 
 		System.Console.WriteLine(this.GetType().Name + ".Generate: Path generated.");
 		return lastCalculatedPath;
@@ -76,49 +76,49 @@ abstract class PathFinder : Canvas
 	 *	-> Count == 0	means	'Completed but empty (no path found).'
 	 *	-> Count > 0	means	'Yolo let's go!'
 	 */
-	protected abstract List<Node> generate(Node from, Node to);
+	protected abstract List<Node> Generate(Node from, Node to);
 
 	/////////////////////////////////////////////////////////////////////////////////////////
 	/// PathFinder visualization helpers method
 	///	As you can see this looks a lot like the code in NodeGraph, but that is just coincidence
 	///	By not reusing any of that code you are free to tweak the visualization anyway you want
 
-	protected virtual void draw()
+	protected virtual void Draw()
 	{
 		//to keep things simple we redraw all debug info every frame
 		graphics.Clear(Color.Transparent);
 
 		//draw path if we have one
-		if (lastCalculatedPath != null) drawPath();
+		if (lastCalculatedPath != null) DrawPath();
 
 		//draw start and end if we have one
-		if (startNode != null) drawNode(startNode, startNodeColor);
-		if (endNode != null) drawNode(endNode, endNodeColor);
+		if (startNode != null) DrawNode(startNode, startNodeColor);
+		if (endNode != null) DrawNode(endNode, endNodeColor);
 
 		//TODO: you could override this method and draw your own additional stuff for debugging
 	}
 
-	protected virtual void drawPath()
+	protected virtual void DrawPath()
 	{
 		//draw all lines
 		for (int i = 0; i < lastCalculatedPath.Count - 1; i++)
 		{
-			drawConnection(lastCalculatedPath[i], lastCalculatedPath[i + 1]);
+			DrawConnection(lastCalculatedPath[i], lastCalculatedPath[i + 1]);
 		}
 
 		//draw all nodes between start and end
 		for (int i = 1; i < lastCalculatedPath.Count - 1; i++)
 		{
-			drawNode(lastCalculatedPath[i], pathNodeColor);
+			DrawNode(lastCalculatedPath[i], pathNodeColor);
 		}
 	}
 
-	protected virtual void drawNodes (IEnumerable<Node> nodes, Brush color)
+	protected virtual void DrawNodes (IEnumerable<Node> nodes, Brush color)
 	{
-		foreach (Node node in nodes) drawNode(node, color);
+		foreach (Node node in nodes) DrawNode(node, color);
 	}
 
-	protected virtual void drawNode(Node node, Brush color)
+	protected virtual void DrawNode(Node node, Brush color)
 	{
 		int nodeSize = nodeGraph.GetNodeSize()+2;
 
@@ -141,7 +141,7 @@ abstract class PathFinder : Canvas
 		);
 	}
 
-	protected virtual void drawConnection(Node startNode, Node endNode)
+	protected virtual void DrawConnection(Node startNode, Node endNode)
 	{
 		//draw a thick black line with yellow core
 		graphics.DrawLine(connectionPen1,	startNode.location,endNode.location);
@@ -154,10 +154,10 @@ abstract class PathFinder : Canvas
 
 	public void Update()
 	{
-		handleInput();
+		HandleInput();
 	}
 
-	protected virtual void handleInput()
+	protected virtual void HandleInput()
 	{
 		if (Input.GetKeyDown(Key.C))
 		{
@@ -171,9 +171,14 @@ abstract class PathFinder : Canvas
 		{
 			if (startNode != null && endNode != null)
 			{
-				Generate(startNode, endNode);
+				GeneratePath(startNode, endNode);
 			}
 		}
+	}
+
+	public void ClearLastPath()
+	{
+		lastCalculatedPath = null;
 	}
 
 

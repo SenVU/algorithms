@@ -49,10 +49,11 @@ class NodeLabelDrawer : Canvas
 		}
 	}
 
-    protected virtual void DrawNode(Node pNode)
+    protected virtual void DrawNode(Node node)
 	{
-		SizeF size = graphics.MeasureString(pNode.id, _labelFont);
-		graphics.DrawString(pNode.id, _labelFont, Brushes.Black, pNode.location.X - size.Width / 2, pNode.location.Y - size.Height / 2);
+		if (node== null) return;
+		SizeF size = graphics.MeasureString(node.id, _labelFont);
+		graphics.DrawString(node.id, _labelFont, Brushes.Black, node.location.X - size.Width / 2, node.location.Y - size.Height / 2);
 	}
 
 }

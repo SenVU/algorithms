@@ -10,12 +10,14 @@ using System.Diagnostics;
  */
 abstract class NodeGraphAgent : AnimationSprite
 {
+	public enum AgentType {
+		RANDOM,
+		QEUEU,
+		PATHFIND,
+	}
+
 	NodeGraph nodeGraph = null;
 	protected Node standingNode = null;
-
-	protected const int regularSpeed = 1;
-	protected const int fastSpeed = 10;
-	protected const int speedUpKey = Key.LEFT_CTRL;
 
 	public NodeGraphAgent(NodeGraph nodeGraph) : base("assets/orc.png", 4, 2, 7)
 	{
@@ -36,7 +38,7 @@ abstract class NodeGraphAgent : AnimationSprite
 	/// </summary>
 	protected virtual bool MoveTowardsNode(Node target)
 	{
-		float speed = Input.GetKey(speedUpKey) ? fastSpeed : regularSpeed;
+		float speed = Input.GetKey(AlgorithmsAssignment.AGENT_RUN_KEY) ? AlgorithmsAssignment.AGENT_RUN_SPEED : AlgorithmsAssignment.AGENT_SPEED;
 		//increase our current frame based on time passed and current speed
 		SetFrame((int)(speed * (Time.time / 100)) % frameCount);
 
@@ -75,12 +77,12 @@ abstract class NodeGraphAgent : AnimationSprite
 	/// <summary>
 	/// selects a random node and jumps to it immediately
 	/// </summary>
-	public Node GotoRandomNode()
+	public virtual Node GotoRandomNode(int seed)
 	{
 		if (nodeGraph.GetNodes().Length > 0)
 		{
 			//Node randomNode = nodeGraph.GetNodes()[Utils.Random(0, nodeGraph.GetNodes().Count)];
-			Node randomNode = Array2D<Node>.GetRandomForm2DArray(nodeGraph.GetNodes());
+			Node randomNode = Array2D<Node>.GetRandomForm2DArray(nodeGraph.GetNodes(), seed);
 			JumpToNode(randomNode);
 			standingNode = randomNode;
 			return randomNode;

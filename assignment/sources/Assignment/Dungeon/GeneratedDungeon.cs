@@ -24,7 +24,7 @@ internal class GeneratedDungeon : Dungeon
         AddLeftoverRooms();
 
         // this wil generate a door between all possible doors id generateAllDoors is true
-        if (AlgorithmsAssignment.generateAllDoors)
+        if (AlgorithmsAssignment.GENERATE_ALL_DOORS)
         {
             FindConnectedRooms();
             AddDoorToConnections();
@@ -47,17 +47,17 @@ internal class GeneratedDungeon : Dungeon
         //save the amount of loops so i dont go over the max
         int loop = 0;
 
-        while (roomsQueue.Count > 0 && loop < AlgorithmsAssignment.maxGenerationLoops)
+        while (roomsQueue.Count > 0 && (loop < AlgorithmsAssignment.MAX_GENERATION_LOOPS || AlgorithmsAssignment.MAX_GENERATION_LOOPS==-1))
         {
             //get room at 0
             Room currentRoom = roomsQueue[0];
 
             // rooms can be split if the size is bigger that pMinimumRoomSize * 2
             // also a random chanse to finalize the room called finalizeRoomChanse
-            if ((currentRoom.area.Width > AlgorithmsAssignment.minRoomSize * 2 || currentRoom.area.Height > AlgorithmsAssignment.minRoomSize * 2) && random.NextDouble() > AlgorithmsAssignment.finalizeRoomChanse)
+            if ((currentRoom.area.Width > AlgorithmsAssignment.MIN_ROOM_SIZE * 2 || currentRoom.area.Height > AlgorithmsAssignment.MIN_ROOM_SIZE * 2) && random.NextDouble() > AlgorithmsAssignment.FINALIZE_ROOM_CHANSE)
             {
                 bool splitsHorizontal = currentRoom.area.Width >= currentRoom.area.Height;
-                SplitRoom(currentRoom, AlgorithmsAssignment.minRoomSize, splitsHorizontal);
+                SplitRoom(currentRoom, AlgorithmsAssignment.MIN_ROOM_SIZE, splitsHorizontal);
                 roomsQueue.Remove(currentRoom);
             }
             // if the rest fails the room should not be split and will be moved to the roomsDone list
@@ -100,12 +100,12 @@ internal class GeneratedDungeon : Dungeon
             roomsQueue.Add(new Room(room1Rect, this));
             roomsQueue.Add(new Room(room2Rect, this));
         }
-        if (!AlgorithmsAssignment.generateAllDoors) GenerateDoorOnSplit(splitsHorizontal, room2Rect, minRoomSize);
+        if (!AlgorithmsAssignment.GENERATE_ALL_DOORS) GenerateDoorOnSplit(splitsHorizontal, room2Rect, minRoomSize);
     }
 
     void GenerateDoorOnSplit(bool splitsHorizontal, Rectangle room2Rect, int minRoomSize)
     {
-        int dist = random.Next(AlgorithmsAssignment.maxShrink + 1, minRoomSize - (AlgorithmsAssignment.maxShrink + 1));
+        int dist = random.Next(AlgorithmsAssignment.MAX_ROOM_SHRINK + 1, minRoomSize - (AlgorithmsAssignment.MAX_ROOM_SHRINK + 1));
         if (splitsHorizontal)
         {
             if (random.NextDouble() >= .5) doors.Add(new Door(new Point(room2Rect.X, room2Rect.Y + dist),this,splitsHorizontal));
@@ -137,7 +137,7 @@ internal class GeneratedDungeon : Dungeon
     {
         foreach (Room room in rooms)
         {
-            foreach (Room connection in room.rightConnections) { addDoorRight(room, connection); }
+            foreach (Room connection in room.rightConnections) { AddDoorRight(room, connection); }
             foreach (Room connection in room.bottomConnections) { AddDoorBottom(room, connection); }
         }
     }
@@ -145,10 +145,10 @@ internal class GeneratedDungeon : Dungeon
     /// <summary>
     /// will add a room between a room and an ajacent room on the right
     /// </summary>
-    void addDoorRight(Room room, Room connection)
+    void AddDoorRight(Room room, Room connection)
     {
-        int minHeight = Math.Max(room.area.Y + AlgorithmsAssignment.maxShrink + 1, connection.area.Y + AlgorithmsAssignment.maxShrink + 1);
-        int maxHeight = Math.Min(room.area.Y + room.area.Height - 1 - AlgorithmsAssignment.maxShrink, connection.area.Y + connection.area.Height - 1 - AlgorithmsAssignment.maxShrink);
+        int minHeight = Math.Max(room.area.Y + AlgorithmsAssignment.MAX_ROOM_SHRINK + 1, connection.area.Y + AlgorithmsAssignment.MAX_ROOM_SHRINK + 1);
+        int maxHeight = Math.Min(room.area.Y + room.area.Height - 1 - AlgorithmsAssignment.MAX_ROOM_SHRINK, connection.area.Y + connection.area.Height - 1 - AlgorithmsAssignment.MAX_ROOM_SHRINK);
         if (minHeight <= 0 || maxHeight <= 0 || maxHeight - minHeight <= 0) return;
         Door door = new Door(new Point(connection.area.X, minHeight + random.Next(maxHeight - minHeight)),this, true);
         door.SetConnectedRooms(room, connection);
@@ -160,8 +160,8 @@ internal class GeneratedDungeon : Dungeon
     /// </summary>
     void AddDoorBottom(Room room, Room connection)
     {
-        int minWidth = Math.Max(room.area.X + AlgorithmsAssignment.maxShrink + 1, connection.area.X + AlgorithmsAssignment.maxShrink + 1);
-        int maxWidth = Math.Min(room.area.X + room.area.Width - 1-AlgorithmsAssignment.maxShrink, connection.area.X + connection.area.Width - 1-AlgorithmsAssignment.maxShrink);
+        int minWidth = Math.Max(room.area.X + AlgorithmsAssignment.MAX_ROOM_SHRINK + 1, connection.area.X + AlgorithmsAssignment.MAX_ROOM_SHRINK + 1);
+        int maxWidth = Math.Min(room.area.X + room.area.Width - 1-AlgorithmsAssignment.MAX_ROOM_SHRINK, connection.area.X + connection.area.Width - 1-AlgorithmsAssignment.MAX_ROOM_SHRINK);
         if (minWidth <= 0 || maxWidth <= 0 || maxWidth - minWidth <= 0) return;
         Door door = new Door(new Point(minWidth + random.Next(maxWidth - minWidth), connection.area.Y),this,false);
         door.SetConnectedRooms(room, connection);
@@ -190,7 +190,7 @@ internal class GeneratedDungeon : Dungeon
     {
         foreach (Room room in rooms)
         {
-            int randShrink = random.Next(AlgorithmsAssignment.minShrink, AlgorithmsAssignment.maxShrink +1);
+            int randShrink = random.Next(AlgorithmsAssignment.MIN_ROOM_SHRINK, AlgorithmsAssignment.MAX_ROOM_SHRINK +1);
             room.Shrink(randShrink);
         }
     }

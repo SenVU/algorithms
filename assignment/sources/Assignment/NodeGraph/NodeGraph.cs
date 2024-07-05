@@ -1,13 +1,12 @@
 ﻿using GXPEngine;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 
 abstract class NodeGraph : Canvas
 {
-    //references to all the nodes in our nodegraph
-    //readonly List<Node> nodes = new List<Node>();
-    Node[,] nodes = new Node[AlgorithmsAssignment.screenWidth,AlgorithmsAssignment.screenHeight];
+	//references to all the nodes in our nodegraph
+	//readonly List<Node> nodes = new List<Node>();
+	Node[,] nodes = new Node[AlgorithmsAssignment.SCREEN_WIDTH, AlgorithmsAssignment.SCREEN_HEIGHT];
 
 	//int ints = new int[2][3];
 
@@ -29,8 +28,8 @@ abstract class NodeGraph : Canvas
 	Brush defaultNodeColor = Brushes.CornflowerBlue;
 	Brush highlightedNodeColor = Brushes.Cyan;
 
-	
-	
+
+
 	/** 
 	 * Construct a nodegraph with the given screen dimensions, eg 800x600
 	 */
@@ -38,9 +37,9 @@ abstract class NodeGraph : Canvas
 	{
 		this.nodeSize = nodeSize;
 
-		nodes = new Node[AlgorithmsAssignment.screenWidth,AlgorithmsAssignment.screenHeight];
+		nodes = new Node[AlgorithmsAssignment.SCREEN_WIDTH, AlgorithmsAssignment.SCREEN_HEIGHT];
 
-        Console.WriteLine("\n-----------------------------------------------------------------------------");
+		Console.WriteLine("\n-----------------------------------------------------------------------------");
 		Console.WriteLine(this.GetType().Name + " created.");
 		Console.WriteLine("* (Shift) LeftClick/RightClick on nodes to trigger the corresponding events.");
 		Console.WriteLine("-----------------------------------------------------------------------------");
@@ -51,10 +50,12 @@ abstract class NodeGraph : Canvas
 	 */
 	public void AddConnection(Node nodeA, Node nodeB)
 	{
-		if (nodeA != null && nodeB!=null)
+        Console.WriteLine($"Trying to connect ({nodeA},{nodeB})");
+        if (nodeA != null && nodeB != null)
 		{
 			if (!nodeA.IsConnectedTo(nodeB)) nodeA.AddConnection(nodeB);
 			if (!nodeB.IsConnectedTo(nodeA)) nodeB.AddConnection(nodeA);
+			Console.WriteLine($"ConnectionCreated ({nodeA},{nodeB})");
 		}
 	}
 
@@ -64,7 +65,7 @@ abstract class NodeGraph : Canvas
 
 		//always remove all nodes before generating the graph, as it might have been generated previously
 		//Array2D<Node>.Clear2DArray(nodes,AlgorithmsAssignment.screenWidth, AlgorithmsAssignment.screenHeight);
-		nodes = new Node[AlgorithmsAssignment.screenWidth, AlgorithmsAssignment.screenHeight];
+		nodes = new Node[AlgorithmsAssignment.SCREEN_WIDTH, AlgorithmsAssignment.SCREEN_HEIGHT];
 		//nodes.Clear();
 		Generate();
 		Draw();
@@ -72,27 +73,28 @@ abstract class NodeGraph : Canvas
 		System.Console.WriteLine(this.GetType().Name + ".Generate: Graph generated.");
 	}
 
-    protected abstract void Generate();
+	protected abstract void Generate();
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    /// NodeGraph visualization helper methods
-    ///
+	/////////////////////////////////////////////////////////////////////////////////////////
+	/// NodeGraph visualization helper methods
+	///
 
-    protected virtual void Draw()
+	protected virtual void Draw()
 	{
 		graphics.Clear(Color.Transparent);
 		DrawAllConnections();
 		DrawNodes();
 	}
 
-    protected virtual void DrawNodes()
+	protected virtual void DrawNodes()
 	{
-        foreach (Node node in nodes) {
+		foreach (Node node in nodes)
+		{
 			DrawNode(node, defaultNodeColor);
 		}
 	}
 
-    protected virtual void DrawNode(Node node, Brush color)
+	protected virtual void DrawNode(Node node, Brush color)
 	{
 		if (node == null) return;
 		//colored node fill
@@ -114,45 +116,42 @@ abstract class NodeGraph : Canvas
 		);
 	}
 
-    protected virtual void DrawAllConnections()
+	protected virtual void DrawAllConnections()
 	{
-        //note that this means all connections are drawn twice, once from A->B and once from B->A
-        //but since is only a debug view we don't care
-        foreach (Node node in nodes)
-        {
-            DrawNodeConnections(node);
-        }
+		//note that this means all connections are drawn twice, once from A->B and once from B->A
+		//but since is only a debug view we don't care
+		foreach (Node node in nodes)
+		{
+			DrawNodeConnections(node);
+		}
 	}
 
-    protected virtual void DrawNodeConnections(Node node)
+	protected virtual void DrawNodeConnections(Node node)
 	{
-		if (node==null) return;
+		if (node == null) return;
 		foreach (Node connection in node.GetConnections())
 		{
 			DrawConnection(node, connection);
 		}
 	}
 
-    protected virtual void DrawConnection(Node pStartNode, Node pEndNode)
+	protected virtual void DrawConnection(Node pStartNode, Node pEndNode)
 	{
 		graphics.DrawLine(connectionPen, pStartNode.location, pEndNode.location);
 	}
 
-	/////////////////////////////////////////////////////////////////////////////////////////
-	///							Update loop
-	///							
-
-	//this has to be virtual or public otherwise the subclass won't pick it up
+	/// <summary>
+	/// Update loop
+	/// </summary>
 	protected virtual void Update()
 	{
 		HandleMouseInteraction();
 	}
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    ///							Node click handling
-    ///							
-
-    protected virtual void HandleMouseInteraction()
+	/// <summary>
+	/// Node click handling
+	/// </summary>	
+	protected virtual void HandleMouseInteraction()
 	{
 		//then check if one of the nodes is under the mouse and if so assign it to _nodeUnderMouse
 		Node newNodeUnderMouse = null;
@@ -164,8 +163,8 @@ abstract class NodeGraph : Canvas
 				break;
 			}
 		}
-        
-        
+
+
 
 		//do mouse node hightlighting
 		if (newNodeUnderMouse != _nodeUnderMouse)
@@ -194,11 +193,11 @@ abstract class NodeGraph : Canvas
 		}
 	}
 
-    /// <summary>
-    /// Checks whether the mouse is over a Node.
-    ////This assumes local and global space are the same.
-    /// </summary>
-    public bool IsMouseOverNode(Node node)
+	/// <summary>
+	/// Checks whether the mouse is over a Node.
+	////This assumes local and global space are the same.
+	/// </summary>
+	public bool IsMouseOverNode(Node node)
 	{
 		if (node == null) return false;
 		//ah life would be so much easier if we'd all just use Vec2's ;)
@@ -210,42 +209,41 @@ abstract class NodeGraph : Canvas
 	}
 
 	/// <summary>
-	/// checks what node is at (x,y)
+	/// Checks what node is at (x,y)
 	/// </summary>
 	public Node GetNodeAt(int x, int y)
 	{
-		return nodes[x,y];
+		return nodes[x, y];
 	}
 
-        /// <summary>
-        /// checks what node is at a point
-        /// </summary>
-        public Node GetNodeAt(Point point)
-    {
+	/// <summary>
+	/// Checks what node is at a point
+	/// </summary>
+	public Node GetNodeAt(Point point)
+	{
 		int x = point.X;
 		int y = point.Y;
-		return GetNodeAt(x,y);
-    }
+		return GetNodeAt(x, y);
+	}
 
 	/// <summary>
-	/// adds a node to the graphs list
+	/// Adds a node to the graphs list
 	/// </summary>
-	public void AddNode(Node node, int x, int y) { nodes[x,y] = node; }
+	public void AddNode(Node node, int x, int y) { nodes[x, y] = node; }
 
-	/// <summary>
-	/// reads the graphs node list
-	/// </summary>
-	public Node[,] GetNodes() { return nodes; }
+    /// <summary>
+    /// Reruns the graphs node array
+    /// </summary>
+    /// <returns>
+	/// A 2dArray nodegraph
+	/// </returns>
+    public Node[,] GetNodes() { return nodes; }
 
 	public int GetNodeSize() { return nodeSize; }
 
 	public Node TryPlaceNode(Point location)
-    {
-		Node node = GetNodeAt(location);
-        if (node == null)
-        {
-            node = new Node(location, this);
-        }
+	{
+		Node  node = GetNodeAt(location) ??new Node(location, this);
 		return node;
-    }
+	}
 }

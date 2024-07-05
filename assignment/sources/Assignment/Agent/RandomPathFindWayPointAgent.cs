@@ -6,7 +6,7 @@ class RandomPathFindWayPointAgent : NodeGraphAgent
 	//Current target to move towards
 	//Node previousTarget = null;
 	Node target = null;
-	Node previosTarget = null;
+	Node previousTarget = null;
 
 	Node finalTarget = null;
 
@@ -14,9 +14,6 @@ class RandomPathFindWayPointAgent : NodeGraphAgent
 	public RandomPathFindWayPointAgent(NodeGraph nodeGraph) : base(nodeGraph)
 	{
 		SetOrigin(width / 2, height / 2);
-
-		//position ourselves on a random node
-		GotoRandomNode();
 
 		//listen to nodeclicks
 		nodeGraph.OnNodeLeftClicked += OnNodeClickHandler;
@@ -42,7 +39,7 @@ class RandomPathFindWayPointAgent : NodeGraphAgent
 		{
 			finalTarget = null;
 			target = null;
-			previosTarget = null;
+			previousTarget = null;
 		}
 
 		// checks if there is a target and idle (it is idle when standing node is not null))
@@ -73,7 +70,7 @@ class RandomPathFindWayPointAgent : NodeGraphAgent
 			List<Node> possibleTargets = new List<Node>();
 			foreach (Node node in standingNode.GetConnections())
 			{
-				if (node != previosTarget)
+				if (node != previousTarget)
 				{
 					possibleTargets.Add(node);
 				}
@@ -102,7 +99,7 @@ class RandomPathFindWayPointAgent : NodeGraphAgent
 	protected void SetTarget(Node node)
 	{
 		target = node;
-		previosTarget = standingNode;
+		previousTarget = standingNode;
 		standingNode = null;
 	}
 }

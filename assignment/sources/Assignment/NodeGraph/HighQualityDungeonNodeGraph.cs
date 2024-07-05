@@ -3,11 +3,11 @@ using System.Diagnostics;
 using System.Drawing;
 
 
- class ComplexDungeonNodeGraph : NodeGraph
+ class HighQualityDungeonNodeGraph : NodeGraph
 {
     protected Dungeon dungeon;
 
-    public ComplexDungeonNodeGraph(Dungeon dungeon) : base((int)(dungeon.size.Width * dungeon.scale), (int)(dungeon.size.Height * dungeon.scale), Math.Max((int)dungeon.scale/5,1))
+    public HighQualityDungeonNodeGraph(Dungeon dungeon) : base((int)(dungeon.size.Width * dungeon.scale), (int)(dungeon.size.Height * dungeon.scale), Math.Max((int)dungeon.scale/5,1))
 	{
 		Debug.Assert(dungeon != null, "Please pass in a dungeon.");
 
@@ -16,6 +16,7 @@ using System.Drawing;
 
     protected override void Generate()
     {
+        // TODO rewrite using double for loo for x and y and make 2 different methods
         foreach (Room room in dungeon.rooms)
         {
             for (int i = 0; i < (room.area.Width - 2) * (room.area.Height - 2); i++)
@@ -61,7 +62,7 @@ using System.Drawing;
         if (right != null) { AddConnection(node, right); }
 		if (down != null) { AddConnection (node, down); }
 
-        if (AlgorithmsAssignment.nodeGraphHighQualityDiagonals)
+        if (AlgorithmsAssignment.NODEGRAPH_HIGH_QUALITY_DIAGONALS)
         {
             Node rightUp = GetNodeAt(node.location.X + (int)dungeon.scale, node.location.Y - (int)dungeon.scale);
             Node rightDown = GetNodeAt(node.location.X + (int)dungeon.scale, node.location.Y + (int)dungeon.scale);

@@ -23,9 +23,8 @@ class Node
 	private static int lastID = 0;
 
 	/**
-	 * Create a node.
-	 * @param pLocation the position of this node
-	 * @param pLabel a label for the node, if null a unique id is assigned.
+	 * Create a node
+	 * @param location the position of this node
 	 */
 	public Node(Point location)
 	{
@@ -36,6 +35,11 @@ class Node
 		System.Console.WriteLine($"New node Created ID:{id} (X:{location.X},Y:{location.Y})");
 	}
 
+    /**
+	 * Create a node and add it to a nodegraph
+	 * @param location the position of this node
+	 * @param nodeGraph the graph this node is a part of
+	 */
     public Node(Point location, NodeGraph nodeGraph) : this(location)
     {
 		nodeGraph.AddNode(this, location.X, location.Y);
@@ -46,7 +50,7 @@ class Node
 		return $"Node ID:{id}";
 	}
 
-	public List<Node> GetConnections() { return connections; }
+	public List<Node> GetConnections() { return new List<Node>(connections); }
 
 	public void AddConnection(Node node) { connections.Add(node); }
 
