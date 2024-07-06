@@ -21,7 +21,7 @@ class AlgorithmsAssignment : Game
     public const int SCREEN_WIDTH = 1920;				//the width of the progam window
     public const int SCREEN_HEIGHT = 1080;				//the height of the progam window
 
-    public const int DUNGEON_SCALE = 15;                // MIN of 2
+    public const int DUNGEON_SCALE = 20;                // MIN of 2
 	public const int MIN_ROOM_SIZE = 18;
 
 	public const int MAX_ROOM_SHRINK = 3;				// MAX of (MIN_ROOM_SIZE/2)-1 (inclusive) _ Min of MIN_ROOM_SHRINK
@@ -29,22 +29,25 @@ class AlgorithmsAssignment : Game
 
     public const int MAX_GENERATION_LOOPS = -1;			// MAX any positive int _ MIN of -1 _ -1 for infinite
     public const float FINALIZE_ROOM_CHANSE = .005f;	// RANGE of 0 to 1 _ chanse of a room not splitting further
-    public const bool GENERATE_ALL_DOORS = false;		// generates a door between all rooms
+    public const bool GENERATE_ALL_DOORS = true;		// generates a door between all rooms
 
-    public const bool TILED_VIEW = true;				//fancy mode
+    public const bool TILED_VIEW = true;                //fancy mode
 
 
-	// common node graph settings
+    // common node graph settings
     public const bool NODEGRAPH_HIGH_QUALITY = true;
-	public const bool NODEGRAPH_HIGH_QUALITY_DIAGONALS = true	/* only works if nodeGraphHighQuality is true */
+	public const bool NODEGRAPH_HIGH_QUALITY_DIAGONALS = true	// only works if NODEGRAPH_HIGH_QUALITY is true
         && NODEGRAPH_HIGH_QUALITY;
 
 
 	// common agent settings
-	public const NodeGraphAgent.AgentType AGENT_TYPE = NodeGraphAgent.AgentType.RANDOM;
+	public const NodeGraphAgent.AgentType AGENT_TYPE = NodeGraphAgent.AgentType.PATHFIND;
     public const int AGENT_SPEED = 1;
     public const int AGENT_RUN_SPEED = 10;
     public const int AGENT_RUN_KEY = Key.LEFT_CTRL;
+
+    public const PathFinder.PathFindType PATHFIND_TYPE = PathFinder.PathFindType.ITERATIVE;     // only works if AGENT_TYPE is PATHFIND
+    public const bool PATH_FIND_TRUE_DISTANCE = true;                                           // makes the pathfinder search for shortest path based on actual distance instead of nodecount
 
     public AlgorithmsAssignment() : base(SCREEN_WIDTH, SCREEN_HEIGHT, false, false, -1, -1, false)
 	{
@@ -121,8 +124,16 @@ class AlgorithmsAssignment : Game
             new HighQualityDungeonNodeGraph(dungeon) :
             new DungeonNodeGraph(dungeon) as NodeGraph;
 
-        pathFinder = new SamplePathFinder(nodeGraph);
-
+        switch (PATHFIND_TYPE)
+        {
+            case PathFinder.PathFindType.RECURSIVE:
+                pathFinder = new RecursivePathFinder(nodeGraph);
+                break;
+            case PathFinder.PathFindType.ITERATIVE:
+                pathFinder = new IterativePathFinder(nodeGraph);
+                break;
+        }
+        
         switch (AGENT_TYPE)
         {
             case NodeGraphAgent.AgentType.RANDOM:
@@ -145,6 +156,7 @@ class AlgorithmsAssignment : Game
         nodeGraph?.StartGeneration();
         tiledView?.StartGeneration();
         agent?.GotoRandomNode(seed);
+        pathFinder.DrawClear();
     }
 
     void Generate()
@@ -162,6 +174,8 @@ class AlgorithmsAssignment : Game
                 Generate();
         }
     }
+
+    public NodeGraphAgent GetAgent() { return agent; }
 }
 
 

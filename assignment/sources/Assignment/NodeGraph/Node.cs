@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 /**
@@ -31,21 +32,21 @@ class Node
 		this.location = location;
 
 		//use an autoincrementing id as label
-		id = ""+lastID++;
+		id = "" + lastID++;
 		System.Console.WriteLine($"New node Created ID:{id} (X:{location.X},Y:{location.Y})");
 	}
 
-    /**
+	/**
 	 * Create a node and add it to a nodegraph
 	 * @param location the position of this node
 	 * @param nodeGraph the graph this node is a part of
 	 */
-    public Node(Point location, NodeGraph nodeGraph) : this(location)
-    {
+	public Node(Point location, NodeGraph nodeGraph) : this(location)
+	{
 		nodeGraph.AddNode(this, location.X, location.Y);
-    }
+	}
 
-    public override string ToString()
+	public override string ToString()
 	{
 		return $"Node ID:{id}";
 	}
@@ -54,6 +55,8 @@ class Node
 
 	public void AddConnection(Node node) { connections.Add(node); }
 
-	public bool IsConnectedTo(Node node) {  return connections.Contains(node); }
+	public bool IsConnectedTo(Node node) { return connections.Contains(node); }
+
+	public float GetDistanceTo(Node otherNode) { return (float)Math.Sqrt((otherNode.location.X - location.X) * (otherNode.location.X - location.X) + (otherNode.location.Y - location.Y) * (otherNode.location.Y - location.Y)); }
 }
 

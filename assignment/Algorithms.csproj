@@ -139,6 +139,9 @@
     <Compile Include="sources\AlgorithmsAssignment.cs" />
     <Compile Include="sources\Assignment\NodeGraph\HighQualityDungeonNodeGraph.cs" />
     <Compile Include="sources\Assignment\NodeGraph\DungeonNodeGraph.cs" />
+    <Compile Include="sources\Assignment\PathFinding\IterativePathFinder\IterativePathFinder.cs" />
+    <Compile Include="sources\Assignment\PathFinding\IterativePathFinder\PathIteration.cs" />
+    <Compile Include="sources\Assignment\PathFinding\RecursivePathFinder.cs" />
     <Compile Include="sources\Assignment\PathFinding\SamplePathFinder.cs" />
     <Compile Include="sources\Assignment\Agent\NodeGraphAgent.cs" />
     <Compile Include="sources\Assignment\Tiles\TiledDungeonView.cs" />

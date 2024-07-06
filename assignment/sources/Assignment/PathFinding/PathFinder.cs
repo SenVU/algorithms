@@ -14,11 +14,18 @@ using System.Drawing;
  */
 abstract class PathFinder : Canvas
 {
-	protected Node startNode;							
+    public enum PathFindType
+    {
+        RECURSIVE,
+		ITERATIVE
+    }
+
+
+    protected Node startNode;							
 	protected Node endNode;
 	protected List<Node> lastCalculatedPath = null;
 
-	protected NodeGraph nodeGraph;
+    protected NodeGraph nodeGraph;
 
 	//some values for drawing the path
 	private Pen outlinePen = new Pen(Color.Black, 4);
@@ -85,31 +92,36 @@ abstract class PathFinder : Canvas
 
 	protected virtual void Draw()
 	{
-		//to keep things simple we redraw all debug info every frame
-		graphics.Clear(Color.Transparent);
-
-		//draw path if we have one
-		if (lastCalculatedPath != null) DrawPath();
-
-		//draw start and end if we have one
-		if (startNode != null) DrawNode(startNode, startNodeColor);
-		if (endNode != null) DrawNode(endNode, endNodeColor);
-
-		//TODO: you could override this method and draw your own additional stuff for debugging
+		Draw(true);
 	}
 
-	protected virtual void DrawPath()
+    protected virtual void Draw(bool drawTransparent)
+    {
+        //to keep things simple we redraw all debug info every frame
+        if(drawTransparent)DrawClear();
+
+        //draw path if we have one
+        if (lastCalculatedPath != null) DrawPath(lastCalculatedPath, pathNodeColor);
+
+        //draw start and end if we have one
+        if (startNode != null) DrawNode(startNode, startNodeColor);
+        if (endNode != null) DrawNode(endNode, endNodeColor);
+
+        //TODO: you could override this method and draw your own additional stuff for debugging
+    }
+
+    protected virtual void DrawPath(List<Node> path, Brush color)
 	{
 		//draw all lines
-		for (int i = 0; i < lastCalculatedPath.Count - 1; i++)
+		for (int i = 0; i < path.Count - 1; i++)
 		{
-			DrawConnection(lastCalculatedPath[i], lastCalculatedPath[i + 1]);
+			DrawConnection(path[i], path[i + 1]);
 		}
 
 		//draw all nodes between start and end
-		for (int i = 1; i < lastCalculatedPath.Count - 1; i++)
+		for (int i = 1; i < path.Count - 1; i++)
 		{
-			DrawNode(lastCalculatedPath[i], pathNodeColor);
+			DrawNode(path[i], color);
 		}
 	}
 
@@ -181,5 +193,27 @@ abstract class PathFinder : Canvas
 		lastCalculatedPath = null;
 	}
 
+	protected bool isShorterPath(List<Node> path, List<Node> otherPath)
+    {
+        if (path == null) return false;
+        if (otherPath == null) return true;
+		if (AlgorithmsAssignment.PATH_FIND_TRUE_DISTANCE)
+			return getPathDistance(path) < getPathDistance(otherPath);
+		else return path.Count < otherPath.Count;
+    }
 
+	float getPathDistance(List<Node> path)
+	{
+		float distance = 0;
+        for (int i = 0; i < path.Count - 1; i++)
+        {
+			distance += path[i].GetDistanceTo(path[i + 1]);
+        }
+		return distance;
+    }
+
+    public void DrawClear()
+    {
+        graphics.Clear(Color.Transparent);
+    }
 }

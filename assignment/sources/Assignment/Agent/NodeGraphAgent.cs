@@ -1,5 +1,6 @@
 ﻿using GXPEngine;
 using System.Diagnostics;
+using System.Drawing.Printing;
 
 /**
  * NodeGraphAgent provides a starting point for your own agents that would like to navigate the nodegraph.
@@ -94,5 +95,7 @@ abstract class NodeGraphAgent : AnimationSprite
 	{
 		return standingNode != null;
 	}
+
+	public Node GetStandingNode() {  return standingNode; }
 }
 

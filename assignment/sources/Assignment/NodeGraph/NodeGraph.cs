@@ -19,7 +19,7 @@ abstract class NodeGraph : Canvas
 	public Action<Node> OnNodeShiftRightClicked = delegate { };
 
 	//required for node highlighting on mouse over
-	Node _nodeUnderMouse = null;
+	Node nodeUnderMouse = null;
 
 	//some drawing settings
 	int nodeSize;
@@ -167,15 +167,15 @@ abstract class NodeGraph : Canvas
 
 
 		//do mouse node hightlighting
-		if (newNodeUnderMouse != _nodeUnderMouse)
+		if (newNodeUnderMouse != nodeUnderMouse)
 		{
-			if (_nodeUnderMouse != null) DrawNode(_nodeUnderMouse, defaultNodeColor);
-			_nodeUnderMouse = newNodeUnderMouse;
-			if (_nodeUnderMouse != null) DrawNode(_nodeUnderMouse, highlightedNodeColor);
+			if (nodeUnderMouse != null) DrawNode(nodeUnderMouse, defaultNodeColor);
+			nodeUnderMouse = newNodeUnderMouse;
+			if (nodeUnderMouse != null) DrawNode(nodeUnderMouse, highlightedNodeColor);
 		}
 
 		//if we are still not hovering over a node, we are done
-		if (_nodeUnderMouse == null) return;
+		if (nodeUnderMouse == null) return;
 
 		//If _nodeUnderMouse is not null, check if we released the mouse on it.
 		//This is architecturally not the best way, but for this assignment 
@@ -183,13 +183,13 @@ abstract class NodeGraph : Canvas
 
 		if (Input.GetKey(Key.LEFT_SHIFT) || Input.GetKey(Key.RIGHT_SHIFT))
 		{
-			if (Input.GetMouseButtonUp(0)) OnNodeShiftLeftClicked(_nodeUnderMouse);
-			if (Input.GetMouseButtonUp(1)) OnNodeShiftRightClicked(_nodeUnderMouse);
+			if (Input.GetMouseButtonUp(0)) OnNodeShiftLeftClicked(nodeUnderMouse);
+			if (Input.GetMouseButtonUp(1)) OnNodeShiftRightClicked(nodeUnderMouse);
 		}
 		else
 		{
-			if (Input.GetMouseButtonUp(0)) OnNodeLeftClicked(_nodeUnderMouse);
-			if (Input.GetMouseButtonUp(1)) OnNodeRightClicked(_nodeUnderMouse);
+			if (Input.GetMouseButtonUp(0)) OnNodeLeftClicked(nodeUnderMouse);
+			if (Input.GetMouseButtonUp(1)) OnNodeRightClicked(nodeUnderMouse);
 		}
 	}
 

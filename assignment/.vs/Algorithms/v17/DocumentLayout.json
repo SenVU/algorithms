@@ -3,84 +3,112 @@
   "WorkspaceRootPath": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\pathfinding\\iterativepathfinder\\iterativepathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\pathfinding\\iterativepathfinder\\iterativepathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\pathfinding\\recursivepathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\pathfinding\\recursivepathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\algorithmsassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\algorithmsassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\nodegraph\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\nodegraph\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\nodegraph\\nodegraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\nodegraph\\nodegraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\tiles\\tileddungeonview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\tiles\\tileddungeonview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\nodegraph\\highleveldungeonnodegraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\nodegraph\\highleveldungeonnodegraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\agent\\randompathfindongraphwaypointagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\agent\\randompathfindongraphwaypointagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\dungeon\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\dungeon\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\pathfinding\\samplepathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\pathfinding\\samplepathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\agent\\samplenodegraphagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\agent\\samplenodegraphagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\dungeon\\generateddungeon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\dungeon\\generateddungeon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\tiles\\tiledview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\tiles\\tiledview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\agent\\nodegraphagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\agent\\nodegraphagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\agent\\ongraphwaypointagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\agent\\ongraphwaypointagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\tiles\\sampletiledview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\tiles\\sampletiledview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\tiles\\tiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\tiles\\tiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\dungeon\\dungeon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\dungeon\\dungeon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\pathfinding\\pathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\assignment\\pathfinding\\pathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\pathfinding\\pathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\dungeon\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\assignment\\nodegraph\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\nodegraph\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\assignment\\tiles\\tiledview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\tiles\\tiledview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\util\\vec2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\util\\vec2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\assignment\\agent\\nodegraphagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\agent\\nodegraphagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\pathfinding\\iterativepathfinder\\pathiteration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\pathfinding\\iterativepathfinder\\pathiteration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\agent\\queuewaypointagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\agent\\queuewaypointagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\agent\\pathfindingagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\agent\\pathfindingagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\assignment\\nodegraph\\nodegraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\nodegraph\\nodegraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\nodegraph\\dungeonnodegraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\nodegraph\\dungeonnodegraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\assignment\\pathfinding\\samplepathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\pathfinding\\samplepathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\assignment\\tiles\\tileddungeonview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\tiles\\tileddungeonview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\assignment\\dungeon\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\dungeon\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\assignment\\dungeon\\generateddungeon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\dungeon\\generateddungeon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\assignment\\tiles\\tiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\tiles\\tiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\assignment\\dungeon\\dungeon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\dungeon\\dungeon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\assignment\\dungeon\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\dungeon\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\util\\nodelabeldrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\util\\nodelabeldrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\util\\nodelabeldrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\SampleNodeGraphAgent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sources\\Assignment\\Agent\\SampleNodeGraphAgent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\NodeGraph\\HighLevelDungeonNodeGraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sources\\Assignment\\NodeGraph\\HighLevelDungeonNodeGraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\RandomPathFindOnGraphWayPointAgent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sources\\Assignment\\Agent\\RandomPathFindOnGraphWayPointAgent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Tiles\\SampleTiledView.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sources\\Assignment\\Tiles\\SampleTiledView.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\OnGraphWayPointAgent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sources\\Assignment\\Agent\\OnGraphWayPointAgent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,17 +118,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "AlgorithmsAssignment.cs",
               "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\AlgorithmsAssignment.cs",
               "RelativeDocumentMoniker": "sources\\AlgorithmsAssignment.cs",
               "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\AlgorithmsAssignment.cs",
               "RelativeToolTip": "sources\\AlgorithmsAssignment.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwBoAAAAvAAAA",
+              "ViewState": "AQIAAHgAAAAAAAAAAADwv54AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T16:43:38.764Z",
               "IsPinned": true,
@@ -108,163 +136,112 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TiledDungeonView.cs",
-              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Tiles\\TiledDungeonView.cs",
-              "RelativeDocumentMoniker": "sources\\Assignment\\Tiles\\TiledDungeonView.cs",
-              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Tiles\\TiledDungeonView.cs",
-              "RelativeToolTip": "sources\\Assignment\\Tiles\\TiledDungeonView.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAACAAAA",
+              "DocumentIndex": 0,
+              "Title": "IterativePathFinder.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\PathFinding\\IterativePathFinder\\IterativePathFinder.cs",
+              "RelativeDocumentMoniker": "sources\\Assignment\\PathFinding\\IterativePathFinder\\IterativePathFinder.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\PathFinding\\IterativePathFinder\\IterativePathFinder.cs",
+              "RelativeToolTip": "sources\\Assignment\\PathFinding\\IterativePathFinder\\IterativePathFinder.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowCoAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T17:27:49.088Z",
+              "WhenOpened": "2024-07-06T10:34:26.259Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SampleNodeGraphAgent.cs",
-              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\SampleNodeGraphAgent.cs",
-              "RelativeDocumentMoniker": "sources\\Assignment\\Agent\\SampleNodeGraphAgent.cs",
-              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\SampleNodeGraphAgent.cs",
-              "RelativeToolTip": "sources\\Assignment\\Agent\\SampleNodeGraphAgent.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAAAAAA",
+              "DocumentIndex": 6,
+              "Title": "Vec2.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Util\\Vec2.cs",
+              "RelativeDocumentMoniker": "sources\\Util\\Vec2.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Util\\Vec2.cs",
+              "RelativeToolTip": "sources\\Util\\Vec2.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAwwDMAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:10:30.256Z",
+              "WhenOpened": "2024-07-06T11:46:26.891Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Node.cs",
-              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\NodeGraph\\Node.cs",
-              "RelativeDocumentMoniker": "sources\\Assignment\\NodeGraph\\Node.cs",
-              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\NodeGraph\\Node.cs",
-              "RelativeToolTip": "sources\\Assignment\\NodeGraph\\Node.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAxAAAA",
+              "Title": "RecursivePathFinder.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\PathFinding\\RecursivePathFinder.cs",
+              "RelativeDocumentMoniker": "sources\\Assignment\\PathFinding\\RecursivePathFinder.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\PathFinding\\RecursivePathFinder.cs",
+              "RelativeToolTip": "sources\\Assignment\\PathFinding\\RecursivePathFinder.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowEMAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:01:39.026Z",
+              "WhenOpened": "2024-07-06T09:26:05.733Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
+              "Title": "DungeonNodeGraph.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\NodeGraph\\DungeonNodeGraph.cs",
+              "RelativeDocumentMoniker": "sources\\Assignment\\NodeGraph\\DungeonNodeGraph.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\NodeGraph\\DungeonNodeGraph.cs",
+              "RelativeToolTip": "sources\\Assignment\\NodeGraph\\DungeonNodeGraph.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T10:09:40.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "NodeGraph.cs",
               "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\NodeGraph\\NodeGraph.cs",
               "RelativeDocumentMoniker": "sources\\Assignment\\NodeGraph\\NodeGraph.cs",
               "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\NodeGraph\\NodeGraph.cs",
               "RelativeToolTip": "sources\\Assignment\\NodeGraph\\NodeGraph.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAaAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKsAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-06T15:01:54.155Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GeneratedDungeon.cs",
-              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Dungeon\\GeneratedDungeon.cs",
-              "RelativeDocumentMoniker": "sources\\Assignment\\Dungeon\\GeneratedDungeon.cs",
-              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Dungeon\\GeneratedDungeon.cs",
-              "RelativeToolTip": "sources\\Assignment\\Dungeon\\GeneratedDungeon.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:00:15.595Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "HighLevelDungeonNodeGraph.cs",
-              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\NodeGraph\\HighLevelDungeonNodeGraph.cs",
-              "RelativeDocumentMoniker": "sources\\Assignment\\NodeGraph\\HighLevelDungeonNodeGraph.cs",
-              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\NodeGraph\\HighLevelDungeonNodeGraph.cs",
-              "RelativeToolTip": "sources\\Assignment\\NodeGraph\\HighLevelDungeonNodeGraph.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAgwGEAAABgAAAA",
+              "Title": "Node.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\NodeGraph\\Node.cs",
+              "RelativeDocumentMoniker": "sources\\Assignment\\NodeGraph\\Node.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\NodeGraph\\Node.cs",
+              "RelativeToolTip": "sources\\Assignment\\NodeGraph\\Node.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAIAwwDwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:07:23.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Door.cs",
-              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Dungeon\\Door.cs",
-              "RelativeDocumentMoniker": "sources\\Assignment\\Dungeon\\Door.cs",
-              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Dungeon\\Door.cs",
-              "RelativeToolTip": "sources\\Assignment\\Dungeon\\Door.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAvwEMAAABtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:12:26.178Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RandomPathFindOnGraphWayPointAgent.cs",
-              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\RandomPathFindOnGraphWayPointAgent.cs",
-              "RelativeDocumentMoniker": "sources\\Assignment\\Agent\\RandomPathFindOnGraphWayPointAgent.cs",
-              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\RandomPathFindOnGraphWayPointAgent.cs",
-              "RelativeToolTip": "sources\\Assignment\\Agent\\RandomPathFindOnGraphWayPointAgent.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAuwEsAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T16:40:51.494Z",
+              "WhenOpened": "2024-06-06T15:01:39.026Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "SamplePathFinder.cs",
-              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\PathFinding\\SamplePathFinder.cs",
-              "RelativeDocumentMoniker": "sources\\Assignment\\PathFinding\\SamplePathFinder.cs",
-              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\PathFinding\\SamplePathFinder.cs",
-              "RelativeToolTip": "sources\\Assignment\\PathFinding\\SamplePathFinder.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T18:02:07.075Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SampleTiledView.cs",
-              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Tiles\\SampleTiledView.cs",
-              "RelativeDocumentMoniker": "sources\\Assignment\\Tiles\\SampleTiledView.cs",
-              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Tiles\\SampleTiledView.cs",
-              "RelativeToolTip": "sources\\Assignment\\Tiles\\SampleTiledView.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T17:26:49.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "OnGraphWayPointAgent.cs",
-              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\OnGraphWayPointAgent.cs",
-              "RelativeDocumentMoniker": "sources\\Assignment\\Agent\\OnGraphWayPointAgent.cs",
-              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\OnGraphWayPointAgent.cs",
-              "RelativeToolTip": "sources\\Assignment\\Agent\\OnGraphWayPointAgent.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAowC0AAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:49:39.853Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "NodeGraphAgent.cs",
               "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\NodeGraphAgent.cs",
               "RelativeDocumentMoniker": "sources\\Assignment\\Agent\\NodeGraphAgent.cs",
               "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\NodeGraphAgent.cs",
               "RelativeToolTip": "sources\\Assignment\\Agent\\NodeGraphAgent.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAcwGIAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-06T15:46:56.49Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
+              "Title": "PathFinder.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\PathFinding\\PathFinder.cs",
+              "RelativeDocumentMoniker": "sources\\Assignment\\PathFinding\\PathFinder.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\PathFinding\\PathFinder.cs",
+              "RelativeToolTip": "sources\\Assignment\\PathFinding\\PathFinder.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAADgv2QAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T15:36:14.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "TiledView.cs",
               "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Tiles\\TiledView.cs",
               "RelativeDocumentMoniker": "sources\\Assignment\\Tiles\\TiledView.cs",
@@ -277,7 +254,155 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PathFindingAgent.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\PathFindingAgent.cs",
+              "RelativeDocumentMoniker": "sources\\Assignment\\Agent\\PathFindingAgent.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\PathFindingAgent.cs",
+              "RelativeToolTip": "sources\\Assignment\\Agent\\PathFindingAgent.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T10:10:31.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PathIteration.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\PathFinding\\IterativePathFinder\\PathIteration.cs",
+              "RelativeDocumentMoniker": "sources\\Assignment\\PathFinding\\IterativePathFinder\\PathIteration.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\PathFinding\\IterativePathFinder\\PathIteration.cs",
+              "RelativeToolTip": "sources\\Assignment\\PathFinding\\IterativePathFinder\\PathIteration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T10:38:49.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "QueueWayPointAgent.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\QueueWayPointAgent.cs",
+              "RelativeDocumentMoniker": "sources\\Assignment\\Agent\\QueueWayPointAgent.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\QueueWayPointAgent.cs",
+              "RelativeToolTip": "sources\\Assignment\\Agent\\QueueWayPointAgent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T10:10:35.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "HighLevelDungeonNodeGraph.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\NodeGraph\\HighLevelDungeonNodeGraph.cs",
+              "RelativeDocumentMoniker": "sources\\Assignment\\NodeGraph\\HighLevelDungeonNodeGraph.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\NodeGraph\\HighLevelDungeonNodeGraph.cs",
+              "RelativeToolTip": "sources\\Assignment\\NodeGraph\\HighLevelDungeonNodeGraph.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAgwGEAAABgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T15:07:23.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GeneratedDungeon.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Dungeon\\GeneratedDungeon.cs",
+              "RelativeDocumentMoniker": "sources\\Assignment\\Dungeon\\GeneratedDungeon.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Dungeon\\GeneratedDungeon.cs",
+              "RelativeToolTip": "sources\\Assignment\\Dungeon\\GeneratedDungeon.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T15:00:15.595Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 15,
+              "Title": "Door.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Dungeon\\Door.cs",
+              "RelativeDocumentMoniker": "sources\\Assignment\\Dungeon\\Door.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Dungeon\\Door.cs",
+              "RelativeToolTip": "sources\\Assignment\\Dungeon\\Door.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAvwEMAAABtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T15:12:26.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "RandomPathFindOnGraphWayPointAgent.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\RandomPathFindOnGraphWayPointAgent.cs",
+              "RelativeDocumentMoniker": "sources\\Assignment\\Agent\\RandomPathFindOnGraphWayPointAgent.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\RandomPathFindOnGraphWayPointAgent.cs",
+              "RelativeToolTip": "sources\\Assignment\\Agent\\RandomPathFindOnGraphWayPointAgent.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAuwEsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T16:40:51.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SamplePathFinder.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\PathFinding\\SamplePathFinder.cs",
+              "RelativeDocumentMoniker": "sources\\Assignment\\PathFinding\\SamplePathFinder.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\PathFinding\\SamplePathFinder.cs",
+              "RelativeToolTip": "sources\\Assignment\\PathFinding\\SamplePathFinder.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T18:02:07.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "SampleNodeGraphAgent.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\SampleNodeGraphAgent.cs",
+              "RelativeDocumentMoniker": "sources\\Assignment\\Agent\\SampleNodeGraphAgent.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\SampleNodeGraphAgent.cs",
+              "RelativeToolTip": "sources\\Assignment\\Agent\\SampleNodeGraphAgent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T15:10:30.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TiledDungeonView.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Tiles\\TiledDungeonView.cs",
+              "RelativeDocumentMoniker": "sources\\Assignment\\Tiles\\TiledDungeonView.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Tiles\\TiledDungeonView.cs",
+              "RelativeToolTip": "sources\\Assignment\\Tiles\\TiledDungeonView.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T17:27:49.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "SampleTiledView.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Tiles\\SampleTiledView.cs",
+              "RelativeDocumentMoniker": "sources\\Assignment\\Tiles\\SampleTiledView.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Tiles\\SampleTiledView.cs",
+              "RelativeToolTip": "sources\\Assignment\\Tiles\\SampleTiledView.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T17:26:49.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "OnGraphWayPointAgent.cs",
+              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\OnGraphWayPointAgent.cs",
+              "RelativeDocumentMoniker": "sources\\Assignment\\Agent\\OnGraphWayPointAgent.cs",
+              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Agent\\OnGraphWayPointAgent.cs",
+              "RelativeToolTip": "sources\\Assignment\\Agent\\OnGraphWayPointAgent.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowC0AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T15:49:39.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "Dungeon.cs",
               "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Dungeon\\Dungeon.cs",
               "RelativeDocumentMoniker": "sources\\Assignment\\Dungeon\\Dungeon.cs",
@@ -285,12 +410,11 @@
               "RelativeToolTip": "sources\\Assignment\\Dungeon\\Dungeon.cs",
               "ViewState": "AQIAAKcAAAAAAAAAAAAswMQAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:00:13.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T15:00:13.662Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "TileType.cs",
               "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Tiles\\TileType.cs",
               "RelativeDocumentMoniker": "sources\\Assignment\\Tiles\\TileType.cs",
@@ -298,25 +422,11 @@
               "RelativeToolTip": "sources\\Assignment\\Tiles\\TileType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T17:48:28.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T17:48:28.213Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "PathFinder.cs",
-              "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\PathFinding\\PathFinder.cs",
-              "RelativeDocumentMoniker": "sources\\Assignment\\PathFinding\\PathFinder.cs",
-              "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\PathFinding\\PathFinder.cs",
-              "RelativeToolTip": "sources\\Assignment\\PathFinding\\PathFinder.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAvwB0AAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:36:14.386Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "NodeLabelDrawer.cs",
               "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Util\\NodeLabelDrawer.cs",
               "RelativeDocumentMoniker": "sources\\Util\\NodeLabelDrawer.cs",
@@ -324,12 +434,11 @@
               "RelativeToolTip": "sources\\Util\\NodeLabelDrawer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:10:45.242Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T15:10:45.242Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "Room.cs",
               "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\Dungeon\\Room.cs",
               "RelativeDocumentMoniker": "sources\\Assignment\\Dungeon\\Room.cs",
@@ -337,12 +446,11 @@
               "RelativeToolTip": "sources\\Assignment\\Dungeon\\Room.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:18:44.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T15:18:44.89Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Program.cs",
               "RelativeDocumentMoniker": "sources\\Program.cs",
