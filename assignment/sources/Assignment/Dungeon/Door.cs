@@ -18,6 +18,7 @@ class Door
 
 	public bool horizontal = false;
 
+
 	public Door(Rectangle area, Dungeon dungeon)
 	{
 		this.area = area;

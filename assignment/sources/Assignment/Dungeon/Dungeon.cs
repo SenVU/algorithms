@@ -135,7 +135,6 @@ abstract class Dungeon : Canvas
 	//////////////////////////////////////////////////////////////////////////////////////////////
 	///	This section contains helper methods to print information about the dungeon to the console
 
-	//TODO: implement a toString/print method for debugging
 	public override string ToString()
 	{
 		return "Dungeon: implement/override this method to print info about all rooms and doors";

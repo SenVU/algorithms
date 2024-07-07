@@ -2,8 +2,6 @@
 
 class QueueWayPointAgent : NodeGraphAgent
 {
-	//Current target to move towards
-	//Node previousTarget = null;
 	protected List<Node> TargetQueue = new List<Node>();
 
 
@@ -40,6 +38,9 @@ class QueueWayPointAgent : NodeGraphAgent
         }
 	}
 
+	/// <summary>
+	/// Checks if the target is connected to the last in queue and if so adds it
+	/// </summary>
 	public virtual void AddToQueue(Node target)
 	{
 		// check if there is a queue
@@ -60,9 +61,9 @@ class QueueWayPointAgent : NodeGraphAgent
 		}
 	}
 
-    public override Node GotoRandomNode(int seed)
+    public override Node GoToRandomNode(int seed)
     {
 		TargetQueue.Clear();
-        return base.GotoRandomNode(seed);
+        return base.GoToRandomNode(seed);
     }
 }

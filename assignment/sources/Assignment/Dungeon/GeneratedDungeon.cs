@@ -194,4 +194,9 @@ internal class GeneratedDungeon : Dungeon
             room.Shrink(randShrink);
         }
     }
+
+    public override string ToString()
+    {
+        return $"Dungeon: (roomCount:{rooms.Count}, doorCount:{doors.Count})";
+    }
 }

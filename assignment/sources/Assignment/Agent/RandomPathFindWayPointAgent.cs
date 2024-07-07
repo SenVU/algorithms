@@ -3,8 +3,6 @@ using System.Collections.Generic;
 
 class RandomPathFindWayPointAgent : NodeGraphAgent
 {
-	//Current target to move towards
-	//Node previousTarget = null;
 	Node target = null;
 	Node previousTarget = null;
 

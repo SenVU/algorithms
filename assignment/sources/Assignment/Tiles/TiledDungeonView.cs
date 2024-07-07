@@ -3,29 +3,24 @@
 
 class TiledDungeonView : TiledView
 {
-	Dungeon dungeon = null;
-	public TiledDungeonView(Dungeon dungeon) : base(dungeon.size.Width, dungeon.size.Height, (int)dungeon.scale, TileType.WALL)
-	{
-		this.dungeon = dungeon;
+    Dungeon dungeon = null;
+    public TiledDungeonView(Dungeon dungeon) : base(dungeon.size.Width, dungeon.size.Height, (int)dungeon.scale, TileType.WALL)
+    {
+        this.dungeon = dungeon;
     }
 
-	protected override void Generate()
-	{
-		foreach (Room room in dungeon.rooms)
-		{
-            for (int i = 0; i < (room.area.Width - 2)*(room.area.Height-2); i++)
-            {
-                SetTileType(room.area.X + 1 + i % (room.area.Width-2), room.area.Y + 1 + i / (room.area.Width-2), TileType.GROUND);
-            }
-        }
+    protected override void Generate()
+    {
+        foreach (Room room in dungeon.rooms)
+            for (int y = room.area.Y + 1; y < room.area.Y + room.area.Height - 1; y++)
+                for (int x = room.area.X + 1; x < room.area.X + room.area.Width - 1; x++)
+                    SetTileType(x, y, TileType.GROUND);
 
         foreach (Door door in dungeon.doors)
-        {
-            for (int i = 0; i < door.area.Width * door.area.Height; i++)
-            {
-                SetTileType(door.area.X + i % door.area.Width, door.area.Y + i / door.area.Width, TileType.GROUND);
-            }
-        }
+            for (int y = door.area.Y; y < door.area.Y + door.area.Height - 0; y++)
+                for (int x = door.area.X; x < door.area.X + door.area.Width - 0; x++)
+                    SetTileType(x, y, TileType.GROUND);
+
     }
 }
 

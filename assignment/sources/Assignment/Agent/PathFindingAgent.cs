@@ -9,18 +9,22 @@ class PathFindingAgent : QueueWayPointAgent
         this.pathFinder = pathFinder;
     }
 
+    /// <summary>
+    /// Generates a path from the last to the target queue
+    /// </summary>
     public override void AddToQueue(Node target)
     {
         // check if there is a queue
         if (TargetQueue.Count == 0)
         {
-            List<Node> generatedPath = GeneratePath(target);
+            List<Node> generatedPath = pathFinder.GeneratePath(standingNode, target);
+            if (generatedPath != null)
+                TargetQueue.AddRange(generatedPath);
+        } else
+        {
+            List<Node> generatedPath = pathFinder.GeneratePath(TargetQueue[TargetQueue.Count-1], target);
             if (generatedPath != null)
                 TargetQueue.AddRange(generatedPath);
         }
-    }
-
-    protected List<Node> GeneratePath(Node target) {
-        return pathFinder.GeneratePath(standingNode, target);
     }
 }

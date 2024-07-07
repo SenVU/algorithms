@@ -1,6 +1,5 @@
 ﻿using GXPEngine;
 using System.Diagnostics;
-using System.Drawing.Printing;
 
 /**
  * NodeGraphAgent provides a starting point for your own agents that would like to navigate the nodegraph.
@@ -78,7 +77,7 @@ abstract class NodeGraphAgent : AnimationSprite
 	/// <summary>
 	/// selects a random node and jumps to it immediately
 	/// </summary>
-	public virtual Node GotoRandomNode(int seed)
+	public virtual Node GoToRandomNode(int seed)
 	{
 		if (nodeGraph.GetNodes().Length > 0)
 		{

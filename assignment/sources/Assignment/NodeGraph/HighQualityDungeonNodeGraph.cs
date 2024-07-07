@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.Drawing;
 
-
  class HighQualityDungeonNodeGraph : NodeGraph
 {
     protected Dungeon dungeon;
@@ -16,23 +15,19 @@ using System.Drawing;
 
     protected override void Generate()
     {
-        // TODO rewrite using double for loo for x and y and make 2 different methods
         foreach (Room room in dungeon.rooms)
         {
-            for (int i = 0; i < (room.area.Width - 2) * (room.area.Height - 2); i++)
-            {
-                TryPlaceNode(new Point((room.area.X + 1 + i % (room.area.Width - 2)) * (int)dungeon.scale + ((int)dungeon.scale / 2),
-                    (room.area.Y + 1 + i / (room.area.Width - 2)) * (int)dungeon.scale + ((int)dungeon.scale / 2)));
-            }
+            for (int y = room.area.Y+1; y < room.area.Y + room.area.Height - 1; y++)
+                for (int x = room.area.X+1; x < room.area.X + room.area.Width - 1; x++)
+                    TryPlaceNode(new Point(x * (int)dungeon.scale + ((int)dungeon.scale / 2),y * (int)dungeon.scale + ((int)dungeon.scale / 2)));            
         }
 
         foreach (Door door in dungeon.doors)
         {
-            for (int i = 0; i < door.area.Width * door.area.Height; i++)
-            {
-                TryPlaceNode(new Point((door.area.X + i % (door.area.Width)) * (int)dungeon.scale + ((int)dungeon.scale / 2),
-                    (door.area.Y + i / (door.area.Width)) * (int)dungeon.scale + ((int)dungeon.scale / 2)));
-            }
+            for (int y = door.area.Y; y < door.area.Y + door.area.Height; y++)
+                for (int x = door.area.X; x < door.area.X + door.area.Width; x++)
+                    TryPlaceNode(new Point(x * (int)dungeon.scale + ((int)dungeon.scale / 2),y * (int)dungeon.scale + ((int)dungeon.scale / 2)));
+            
         }
         Console.WriteLine(GetNodes().Length);
         foreach (Node node in GetNodes())

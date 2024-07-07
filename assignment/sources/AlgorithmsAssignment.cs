@@ -22,14 +22,14 @@ class AlgorithmsAssignment : Game
     public const int SCREEN_HEIGHT = 1080;				//the height of the progam window
 
     public const int DUNGEON_SCALE = 20;                // MIN of 2
-	public const int MIN_ROOM_SIZE = 18;
+	public const int MIN_ROOM_SIZE = 14;
 
 	public const int MAX_ROOM_SHRINK = 3;				// MAX of (MIN_ROOM_SIZE/2)-1 (inclusive) _ Min of MIN_ROOM_SHRINK
     public const int MIN_ROOM_SHRINK = 1;				// MAX of MAX_ROOM_SHRINK _ MIN of 0
 
     public const int MAX_GENERATION_LOOPS = -1;			// MAX any positive int _ MIN of -1 _ -1 for infinite
     public const float FINALIZE_ROOM_CHANSE = .005f;	// RANGE of 0 to 1 _ chanse of a room not splitting further
-    public const bool GENERATE_ALL_DOORS = true;		// generates a door between all rooms
+    public const bool GENERATE_ALL_DOORS = false;		// generates a door between all rooms
 
     public const bool TILED_VIEW = true;                //fancy mode
 
@@ -42,7 +42,7 @@ class AlgorithmsAssignment : Game
 
 	// common agent settings
 	public const NodeGraphAgent.AgentType AGENT_TYPE = NodeGraphAgent.AgentType.PATHFIND;
-    public const int AGENT_SPEED = 1;
+    public const int AGENT_SPEED = 2;
     public const int AGENT_RUN_SPEED = 10;
     public const int AGENT_RUN_KEY = Key.LEFT_CTRL;
 
@@ -66,40 +66,6 @@ class AlgorithmsAssignment : Game
 			Generate(generationSeed.Value);
 		else
 			Generate();
-
-		/////////////////////////////////////////////////////////////////////////////////////////
-		/// ASSIGNMENT 3 : PathFinding and PathFindingAgents
-		///							
-		/// SKIP THIS BLOCK UNTIL YOU'VE FINISHED ASSIGNMENT 2 AND ASKED FOR TEACHER FEEDBACK !
-
-		//////////////////////////////////////////////////////////////////////////
-		//Assignment 3.1 Sufficient (Mandatory) - Recursive Pathfinding
-		//
-		//TODO: Study assignment 3.1 on blackboard
-		//TODO: Study the PathFinder class
-		//TODO: Study the SamplePathFinder class and try it out
-		//TODO: Comment out the SamplePathFinder, implement a RecursivePathFinder and uncomment it below
-
-		//_pathFinder = new SamplePathFinder(_graph);
-		//_pathFinder = new RecursivePathFinder(_graph);
-
-		//////////////////////////////////////////////////////////////////////////
-		//Assignment 3.1 Sufficient (Mandatory) - BreadthFirst Pathfinding
-		//
-		//TODO: Comment out the RecursivePathFinder above, implement a BreadthFirstPathFinder and uncomment it below
-		//_pathFinder = new BreadthFirstPathFinder(_graph);
-
-		//TODO: Implement a PathFindingAgent that uses one of your pathfinder implementations (should work with any pathfinder implementation)
-		//_agent = new PathFindingAgent(_graph, _pathFinder);
-
-		/////////////////////////////////////////////////
-		//Assignment 3.2 Good & 3.3 Excellent (Optional)
-		//
-		//There are no more explicit TODO's to guide you through these last two parts.
-		//You are on your own. Good luck, make the best of it. Make sure your code is testable.
-		//For example for A*, you must choose a setup in which it is possible to demonstrate your 
-		//algorithm works. Find the best place to add your code, and don't forget to move the
-		//PathFindingAgent below the creation of your PathFinder!
 
 		// add everyling to the engine
 		if (grid != null) AddChild(grid);
@@ -155,7 +121,7 @@ class AlgorithmsAssignment : Game
         dungeon?.StartGeneration(seed);
         nodeGraph?.StartGeneration();
         tiledView?.StartGeneration();
-        agent?.GotoRandomNode(seed);
+        agent?.GoToRandomNode(seed);
         pathFinder.DrawClear();
     }
 

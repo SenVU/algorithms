@@ -9,7 +9,7 @@ abstract class TiledView : GameObject
 	public int columns { get; private set; }
 	public int rows { get; private set; }
 	//stores the tiletype for each cell (and with it whether a tile is walkable)
-	private TileType[,] _tileData;
+	private TileType[,] tileData;
 	//used to reset all data to the default tiletype when requested
 	private TileType defaultTileType;
 	//single sprite, used for rendering all tiles
@@ -37,27 +37,32 @@ abstract class TiledView : GameObject
 	/// </summary>
     private void InitializeTiles ()
 	{
-		_tileData = new TileType[columns, rows];
+		tileData = new TileType[columns, rows];
 		ResetAllTilesToDefault();
 	}
 
 	protected void ResetAllTilesToDefault()
 	{
-		//a 'trick' to do everything in one for loop instead of a nested loop
-		for (int i = 0; i < columns * rows; i++)
+        //a 'trick' to do everything in one for loop instead of a nested loop
+        /*for (int i = 0; i < columns * rows; i++)
 		{
-			_tileData[i % columns, i / columns] = defaultTileType;
-		}
-	}
+			tileData[i % columns, i / columns] = defaultTileType;
+		}*/ // the original code
 
-	public void SetTileType(int column, int row, TileType tileType)
+        for (int y = 0; y < rows; y++)
+            for (int x = 0; x < columns; x++)
+                SetTileType(x, y, defaultTileType);
+		// a nicer way (in my opinion)
+    }
+
+    public void SetTileType(int column, int row, TileType tileType)
 	{
 		//an example of hardcore defensive coding;)
 		Debug.Assert(column >= 0 && column < columns, "Invalid column passed in: " + column);
 		Debug.Assert(row >= 0 && row < rows, "Invalid row passed in:" + row);
 		Debug.Assert(tileType != null, "Invalid tile type passed in:" + tileType);
 
-		_tileData[column, row] = tileType;
+		tileData[column, row] = tileType;
 	}
 
 	public TileType GetTileType(int pColumn, int pRow)
@@ -65,7 +70,7 @@ abstract class TiledView : GameObject
 		Debug.Assert(pColumn >= 0 && pColumn < columns, "Invalid column passed in: " + pColumn);
 		Debug.Assert(pRow >= 0 && pRow < rows, "Invalid row passed in:" + pRow);
 
-		return _tileData[pColumn, pRow];
+		return tileData[pColumn, pRow];
 	}
 
 	protected override void RenderSelf(GLContext glContext)
