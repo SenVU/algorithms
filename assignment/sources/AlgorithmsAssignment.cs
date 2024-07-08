@@ -118,6 +118,7 @@ class AlgorithmsAssignment : Game
 
     void Generate(int seed)
 	{
+        Node.ResetIDCounter();
         dungeon?.StartGeneration(seed);
         nodeGraph?.StartGeneration();
         tiledView?.StartGeneration();

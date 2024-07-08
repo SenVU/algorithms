@@ -142,7 +142,6 @@
     <Compile Include="sources\Assignment\PathFinding\IterativePathFinder\IterativePathFinder.cs" />
     <Compile Include="sources\Assignment\PathFinding\IterativePathFinder\PathIteration.cs" />
     <Compile Include="sources\Assignment\PathFinding\RecursivePathFinder.cs" />
-    <Compile Include="sources\Assignment\PathFinding\SamplePathFinder.cs" />
     <Compile Include="sources\Assignment\Agent\NodeGraphAgent.cs" />
     <Compile Include="sources\Assignment\Tiles\TiledDungeonView.cs" />
     <Compile Include="sources\Assignment\NodeGraph\Node.cs" />

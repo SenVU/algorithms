@@ -13,7 +13,10 @@ class RecursivePathFinder : PathFinder	{
         nodeGraph.OnNodeRightClicked += (node) => { LockOrUnlockNode(node); Draw(); };
     }
 
-	protected override List<Node> Generate(Node from, Node to)
+    /// <summary>
+    /// Generate a path between 2 nodes using recursion
+    /// </summary>
+    protected override List<Node> Generate(Node from, Node to)
 	{
 		Console.WriteLine("Starting Path Generation");
 
@@ -21,7 +24,7 @@ class RecursivePathFinder : PathFinder	{
 
         Console.WriteLine("Finished Path Generation");
 		if (toReturn!=null) {
-            Console.WriteLine($"Path Found With Length{toReturn.Count}");
+            Console.WriteLine($"Path Found With Length {toReturn.Count}");
         } else
 		{
 			Console.WriteLine("No Path Found");
@@ -57,7 +60,10 @@ class RecursivePathFinder : PathFinder	{
         return shortestPath;
 	}
 
-	void LockOrUnlockNode(Node node)
+    /// <summary>
+    /// toggles the lock on a node
+    /// </summary>
+    void LockOrUnlockNode(Node node)
 	{
 		if(lockedNodes.Contains(node)) lockedNodes.Remove(node);
 		else lockedNodes.Add(node);
@@ -66,11 +72,16 @@ class RecursivePathFinder : PathFinder	{
     protected override void Draw()
     {
         DrawClear();
-        foreach (Node lockedNode in lockedNodes)
-		{
-			DrawNode(lockedNode, lockedNodeColor);
-		}
+        DrawLockedNodes();
         base.Draw(false);
+    }
+
+    void DrawLockedNodes()
+    {
+        foreach (Node lockedNode in lockedNodes)
+        {
+            DrawNode(lockedNode, lockedNodeColor);
+        }
     }
 }
 

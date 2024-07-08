@@ -55,6 +55,9 @@ abstract class TiledView : GameObject
 		// a nicer way (in my opinion)
     }
 
+	/// <summary>
+	/// set a given tile to a given type
+	/// </summary>
     public void SetTileType(int column, int row, TileType tileType)
 	{
 		//an example of hardcore defensive coding;)
@@ -65,6 +68,9 @@ abstract class TiledView : GameObject
 		tileData[column, row] = tileType;
 	}
 
+	/// <summary>
+	/// get the type of a given tile
+	/// </summary>
 	public TileType GetTileType(int pColumn, int pRow)
 	{
 		Debug.Assert(pColumn >= 0 && pColumn < columns, "Invalid column passed in: " + pColumn);
@@ -91,10 +97,9 @@ abstract class TiledView : GameObject
 		}
 	}
 
-	/**
-	 * Trigger the tile view generation process, do not override this method, 
-	 * but override generate (note the lower case) instead.
-	 */
+	/// <summary>
+	/// Trigger the tile view generation process, do not override this method
+	/// </summary>
 	public void StartGeneration()
 	{
 		ResetAllTilesToDefault();

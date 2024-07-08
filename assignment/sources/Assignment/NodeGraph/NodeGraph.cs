@@ -30,9 +30,11 @@ abstract class NodeGraph : Canvas
 
 
 
-	/** 
-	 * Construct a nodegraph with the given screen dimensions, eg 800x600
-	 */
+	
+	/// <summary>
+	/// Construct a nodegraph with the given screen dimensions, eg 800x600
+	/// </summary>
+	
 	public NodeGraph(int width, int height, int nodeSize) : base(width, height)
 	{
 		this.nodeSize = nodeSize;
@@ -45,9 +47,9 @@ abstract class NodeGraph : Canvas
 		Console.WriteLine("-----------------------------------------------------------------------------");
 	}
 
-	/**
-	 * Convenience method for adding a connection between two nodes in the nodegraph
-	 */
+	/// <summary>
+	/// Convenience method for adding a connection between two nodes in the nodegraph
+	/// </summary>
 	public void AddConnection(Node nodeA, Node nodeB)
 	{
         Console.WriteLine($"Trying to connect ({nodeA},{nodeB})");
@@ -221,9 +223,7 @@ abstract class NodeGraph : Canvas
 	/// </summary>
 	public Node GetNodeAt(Point point)
 	{
-		int x = point.X;
-		int y = point.Y;
-		return GetNodeAt(x, y);
+		return GetNodeAt(point.X, point.Y);
 	}
 
 	/// <summary>

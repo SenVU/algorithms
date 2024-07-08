@@ -16,12 +16,12 @@ class PathFindingAgent : QueueWayPointAgent
     {
         // check if there is a queue
         if (TargetQueue.Count == 0)
-        {
+        { // generate a path from the standing node
             List<Node> generatedPath = pathFinder.GeneratePath(standingNode, target);
             if (generatedPath != null)
                 TargetQueue.AddRange(generatedPath);
         } else
-        {
+        { // generate a path from the last node
             List<Node> generatedPath = pathFinder.GeneratePath(TargetQueue[TargetQueue.Count-1], target);
             if (generatedPath != null)
                 TargetQueue.AddRange(generatedPath);
