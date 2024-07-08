@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\algorithmsassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\algorithmsassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\assignment\\pathfinding\\recursivepathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\pathfinding\\recursivepathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\algorithmsassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\algorithmsassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\assignment\\pathfinding\\iterativepathfinder\\iterativepathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,7 +27,7 @@
       "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\nodegraph\\nodegraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\nodegraph\\highqualitydungeonnodegraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\assignment\\nodegraph\\highqualitydungeonnodegraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\nodegraph\\highqualitydungeonnodegraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -126,11 +126,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AlgorithmsAssignment.cs",
               "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\AlgorithmsAssignment.cs",
               "RelativeDocumentMoniker": "sources\\AlgorithmsAssignment.cs",
@@ -153,8 +153,7 @@
               "ViewState": "AQIAACQAAAAAAAAAAAAowDUAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-06T10:34:26.259Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -190,8 +189,7 @@
               "RelativeToolTip": "sources\\Assignment\\NodeGraph\\DungeonNodeGraph.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T10:09:40.235Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-06T10:09:40.235Z"
             },
             {
               "$type": "Document",
@@ -227,18 +225,17 @@
               "RelativeToolTip": "sources\\Assignment\\NodeGraph\\NodeGraph.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAKsAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:01:54.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T15:01:54.155Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "RecursivePathFinder.cs",
               "DocumentMoniker": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\PathFinding\\RecursivePathFinder.cs",
               "RelativeDocumentMoniker": "sources\\Assignment\\PathFinding\\RecursivePathFinder.cs",
               "ToolTip": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\Assignment\\PathFinding\\RecursivePathFinder.cs",
               "RelativeToolTip": "sources\\Assignment\\PathFinding\\RecursivePathFinder.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwEMAAAAUAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAqwA8AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-06T09:26:05.733Z",
               "EditorCaption": ""
@@ -253,8 +250,7 @@
               "RelativeToolTip": "sources\\Assignment\\PathFinding\\PathFinder.cs",
               "ViewState": "AQIAAFYAAAAAAAAAAADgv2QAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:36:14.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T15:36:14.386Z"
             },
             {
               "$type": "Document",
@@ -266,8 +262,7 @@
               "RelativeToolTip": "sources\\Assignment\\NodeGraph\\HighQualityDungeonNodeGraph.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAQwBsAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T15:01:43.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-06T15:01:43.221Z"
             },
             {
               "$type": "Document",
