@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\algorithmsassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\algorithmsassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\algorithmsassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\util\\vec2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\util\\rectangleextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\util\\rectangleextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\util\\rectangleextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,11 +19,11 @@
       "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\util\\nodelabeldrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\util\\grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\util\\grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\util\\grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\util\\array2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\util\\array2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\util\\array2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -39,7 +39,7 @@
       "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\tiles\\tiledview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|c:\\users\\sen\\desktop\\gitkraken\\algorithms\\assignment\\sources\\assignment\\pathfinding\\recursivepathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|C:\\Users\\sen\\Desktop\\GitKraken\\algorithms\\assignment\\sources\\assignment\\pathfinding\\recursivepathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66F25691-4FBE-4BCD-A610-0E740B8F3CED}|Algorithms.csproj|solutionrelative:sources\\assignment\\pathfinding\\recursivepathfinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -161,8 +161,7 @@
               "ViewState": "AQIAAHEAAAAAAAAAAAAmwIQAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-06T10:34:26.259Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -174,8 +173,7 @@
               "RelativeToolTip": "sources\\Util\\RectangleExtensions.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T17:59:07.822Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T17:59:07.822Z"
             },
             {
               "$type": "Document",
@@ -187,8 +185,7 @@
               "RelativeToolTip": "sources\\Util\\Grid.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T17:59:02.229Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T17:59:02.229Z"
             },
             {
               "$type": "Document",
@@ -200,8 +197,7 @@
               "RelativeToolTip": "sources\\Util\\Array2D.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAgwB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T17:53:00.454Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T17:53:00.454Z"
             },
             {
               "$type": "Document",
@@ -213,8 +209,7 @@
               "RelativeToolTip": "sources\\Assignment\\PathFinding\\RecursivePathFinder.cs",
               "ViewState": "AQIAAEEAAAAAAAAAAAAwwFcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T09:26:05.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-06T09:26:05.733Z"
             },
             {
               "$type": "Document",
@@ -226,8 +221,7 @@
               "RelativeToolTip": "sources\\Assignment\\PathFinding\\PathFinder.cs",
               "ViewState": "AQIAAFYAAAAAAAAAAADgv2QAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:36:14.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T15:36:14.386Z"
             },
             {
               "$type": "Document",
@@ -239,8 +233,7 @@
               "RelativeToolTip": "sources\\Assignment\\PathFinding\\IterativePathFinder\\PathIteration.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAA1wBgAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T10:38:49.842Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-06T10:38:49.842Z"
             },
             {
               "$type": "Document",
@@ -252,8 +245,7 @@
               "RelativeToolTip": "sources\\Assignment\\NodeGraph\\DungeonNodeGraph.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAowAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T10:09:40.235Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-06T10:09:40.235Z"
             },
             {
               "$type": "Document",
@@ -265,8 +257,7 @@
               "RelativeToolTip": "sources\\Util\\Vec2.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADMAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T11:46:26.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-06T11:46:26.891Z"
             },
             {
               "$type": "Document",
@@ -278,8 +269,7 @@
               "RelativeToolTip": "sources\\Assignment\\Tiles\\TiledDungeonView.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T17:27:49.088Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T17:27:49.088Z"
             },
             {
               "$type": "Document",
@@ -291,8 +281,7 @@
               "RelativeToolTip": "sources\\Util\\NodeLabelDrawer.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAAgwBQAAABUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:10:45.242Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T15:10:45.242Z"
             },
             {
               "$type": "Document",
@@ -304,8 +293,7 @@
               "RelativeToolTip": "sources\\Assignment\\NodeGraph\\NodeGraph.cs",
               "ViewState": "AQIAAOAAAAAAAAAAAAAqwPAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:01:54.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T15:01:54.155Z"
             },
             {
               "$type": "Document",
@@ -317,8 +305,7 @@
               "RelativeToolTip": "sources\\Assignment\\Tiles\\TiledView.cs",
               "ViewState": "AQIAAFYAAAAAAAAAAAAAwG0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T17:23:36.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T17:23:36.604Z"
             },
             {
               "$type": "Document",
@@ -330,8 +317,7 @@
               "RelativeToolTip": "sources\\Assignment\\Tiles\\TileType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T17:48:28.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T17:48:28.213Z"
             },
             {
               "$type": "Document",
@@ -343,8 +329,7 @@
               "RelativeToolTip": "sources\\Assignment\\NodeGraph\\Node.cs",
               "ViewState": "AQIAACsAAAAAAAAAAAAUwDsAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:01:39.026Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T15:01:39.026Z"
             },
             {
               "$type": "Document",
@@ -356,8 +341,7 @@
               "RelativeToolTip": "sources\\Assignment\\NodeGraph\\HighQualityDungeonNodeGraph.cs",
               "ViewState": "AQIAADIAAAAAAAAAAAAwwBsAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T15:01:43.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-06T15:01:43.221Z"
             },
             {
               "$type": "Document",
@@ -369,8 +353,7 @@
               "RelativeToolTip": "sources\\Assignment\\Dungeon\\Room.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:18:44.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T15:18:44.89Z"
             },
             {
               "$type": "Document",
@@ -382,8 +365,7 @@
               "RelativeToolTip": "sources\\Assignment\\Dungeon\\GeneratedDungeon.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:00:15.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T15:00:15.595Z"
             },
             {
               "$type": "Document",
@@ -395,8 +377,7 @@
               "RelativeToolTip": "sources\\Assignment\\Dungeon\\Dungeon.cs",
               "ViewState": "AQIAAEUAAAAAAAAAAAAowDcAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:00:13.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T15:00:13.662Z"
             },
             {
               "$type": "Document",
@@ -408,8 +389,7 @@
               "RelativeToolTip": "sources\\Assignment\\Dungeon\\Door.cs",
               "ViewState": "AQIAADYAAAAAAAAAAAA4wBoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:12:26.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T15:12:26.178Z"
             },
             {
               "$type": "Document",
@@ -421,8 +401,7 @@
               "RelativeToolTip": "sources\\Assignment\\Agent\\RandomPathFindWayPointAgent.cs",
               "ViewState": "AQIAAEwAAAAAAAAAAAAcwAQAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T14:50:40.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-06T14:50:40.232Z"
             },
             {
               "$type": "Document",
@@ -434,8 +413,7 @@
               "RelativeToolTip": "sources\\Assignment\\Agent\\QueueWayPointAgent.cs",
               "ViewState": "AQIAADQAAAAAAAAAAAAcwAMAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T10:10:35.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-06T10:10:35.54Z"
             },
             {
               "$type": "Document",
@@ -447,8 +425,7 @@
               "RelativeToolTip": "sources\\Assignment\\Agent\\PathFindingAgent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T10:10:31.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-06T10:10:31.09Z"
             },
             {
               "$type": "Document",
@@ -460,8 +437,7 @@
               "RelativeToolTip": "sources\\Assignment\\Agent\\NodeGraphAgent.cs",
               "ViewState": "AQIAADIAAAAAAAAAAAAIwAEAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:46:56.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T15:46:56.49Z"
             },
             {
               "$type": "Document",
